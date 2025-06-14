@@ -2,6 +2,9 @@
 {% block title %}Terassien Pesu Espoo - Etusivu{% endblock %}
 
 {% block content %}
+<a href="/etusivu" class="btn">Takaisin</a>
+<div></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Logo" class="logo-icon">
 <div class="image-gallery">
     <img src="{{ url_for('static', filename='images/testiterassi.jpg') }}" alt="Pesty terassi 1" class="gallery-img">
     <img src="{{ url_for('static', filename='images/testiterassi2.jpg') }}" alt="Öljytty terassi 2" class="gallery-img">

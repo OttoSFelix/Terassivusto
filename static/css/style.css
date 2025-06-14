@@ -23,6 +23,11 @@ header {
     z-index: 1000; /* Ensures it stays on top of other content */
 }
 
+.otsikko {
+    color: #333; /* Dark text */
+    text-decoration: none;
+}
+
 .header-content {
     display: flex; /* Use flexbox for alignment */
     justify-content: space-between; /* Space out logo and nav */
@@ -74,7 +79,6 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero-section {
-    background-image: url('/static/images/terrace-bg.jpg'); /* Adjusted path for Flask static files */
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the image */
     color: #fff; /* White text over the image */
@@ -84,6 +88,19 @@ nav ul li a:hover {
     display: flex; /* Use flexbox to center content */
     align-items: center; /* Vertically center */
     justify-content: center; /* Horizontally center */
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Vie videon sisällön alle */
+    transform: translate(-50%, -50%); /* Keskittää videon */
+    background-size: cover; /* Varmistaa, että video peittää alueen */
 }
 
 .hero-content {
@@ -215,5 +232,14 @@ footer {
 
     .hero-buttons {
         flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .about-section p {
+        font-size: 1em;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        max-width: 400px; /* Limit width for single column on mobile */
     }
 }

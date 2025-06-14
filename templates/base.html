@@ -18,14 +18,14 @@
             <div class="logo">
                 <!-- Link to logo image, assuming it's in static/images -->
                 <img src="{{ url_for('static', filename='images/logo-placeholder.png') }}" alt="Logo" class="logo-icon">
-                Terassien Pesu Espoo
+                <a href="/etusivu" class="otsikko">Terassien Pesu Espoo</a>
             </div>
             <nav>
                 <ul>
                     <!-- Navigation links, with 'active' class for current page -->
                     <li><a href="/yhteystiedot" class="{% if request.endpoint == 'yhteystiedot' %}active{% endif %}">Ota yhteyttä</a></li>
                     <li><a href="/hinnasto" class="{% if request.endpoint == 'hinnasto' %}active{% endif %}">Hinnasto ja palvelualue</a></li>
-                    <li><a href="/info" class="{% if request.endpoint == 'tietoa_meista' %}active{% endif %}">Tietoa meistä</a></li>
+                    <li><a href="/info" class="{% if request.endpoint == 'info' %}active{% endif %}">Tietoa meistä</a></li>
                 </ul>
             </nav>
         </div>
