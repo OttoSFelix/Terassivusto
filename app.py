@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from flask import Flask
 from sqlalchemy.sql import text
 from flask import redirect, render_template, request, session
@@ -19,3 +22,15 @@ def etusivu():
     teksti = result.fetchall()
     print(teksti)
     return render_template("etusivu.html", text = teksti)
+
+@app.route('/yhteystiedot')
+def yhteystiedot():
+    return render_template('yhteystiedot.html')
+
+@app.route('/hinnasto')
+def hinnasto():
+    return render_template('hinnasto.html')
+
+@app.route('/info')
+def info():
+    return render_template('info.html')

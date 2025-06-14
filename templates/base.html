@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Terassien Pesu Espoo{% endblock %}</title>
+    <!-- Link to the main stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Google Fonts for consistent typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Placeholder for page-specific CSS -->
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <!-- Link to logo image, assuming it's in static/images -->
+                <img src="{{ url_for('static', filename='images/logo-placeholder.png') }}" alt="Logo" class="logo-icon">
+                Terassien Pesu Espoo
+            </div>
+            <nav>
+                <ul>
+                    <!-- Navigation links, with 'active' class for current page -->
+                    <li><a href="/yhteystiedot" class="{% if request.endpoint == 'yhteystiedot' %}active{% endif %}">Ota yhteyttä</a></li>
+                    <li><a href="/hinnasto" class="{% if request.endpoint == 'hinnasto' %}active{% endif %}">Hinnasto ja palvelualue</a></li>
+                    <li><a href="/info" class="{% if request.endpoint == 'tietoa_meista' %}active{% endif %}">Tietoa meistä</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- This block will be filled by child templates -->
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Terassien Pesu Espoo. Kaikki oikeudet pidätetään.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

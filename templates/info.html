@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Terassien Pesu Espoo - Hinnasto ja palvelualue{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
+{% endblock %}
+
+{% block content %}
+<a href="/etusivu" class="btn">Takaisin</a>
+<div></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Logo" class="logo-icon">
+<section class="contact-section">
+    <div class="container">
+        <h2>Tietoa meistä</h2>
+
+        <div class="contact-info">
+            <p>Tietoa meistä</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Terassien Pesu Espoo - Ota yhteyttä{% endblock %}
+
+{% block extra_css %}
+<!-- Link to page-specific CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/yhteystiedot.css') }}">
+{% endblock %}
+
+{% block content %}
+<a href="/etusivu" class="btn">Takaisin</a>
+<div></div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Logo" class="logo-icon">
+<section class="contact-section">
+    <div class="container">
+        <h2>Ota yhteyttä</h2>
+        <p>Voit ottaa meihin yhteyttä seuraavilla tavoilla tai lähettää viestin alla olevalla lomakkeella. Vastaamme mahdollisimman pian!</p>
+
+        <div class="contact-info">
+            <h3>Yhteystiedot:</h3>
+            <p><strong>Puhelin:</strong> +872326892978</p>
+            <p><strong>Sähköposti:</strong> terassi@sähköposti.fi</p>
+            <p><strong>Osoite:</strong> sdlkfjlsjdfljlasdk</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+

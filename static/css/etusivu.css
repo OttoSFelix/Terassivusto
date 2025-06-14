@@ -1,0 +1,182 @@
+/* Basic Resets & Fonts */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Using a Google Font, or use a system font */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px; /* Max width for content, adjust as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+/* Header */
+header {
+    background-color: #fff; /* White background */
+    padding: 15px 0;
+    border-bottom: 1px solid #eee; /* Subtle border at the bottom */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow */
+    position: sticky; /* Makes the header stick to the top when scrolling */
+    top: 0;
+    z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+.header-content {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out logo and nav */
+    align-items: center; /* Vertically align items */
+}
+
+.logo {
+    font-size: 1.5em; /* Larger font for the logo */
+    font-weight: 700; /* Bold */
+    color: #000; /* Darker color */
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    height: 30px; /* Adjust logo icon size */
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points from list */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make nav items display in a row */
+}
+
+nav ul li {
+    margin-left: 25px; /* Space between nav items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #555; /* Default link color */
+    font-weight: 500;
+    padding-bottom: 5px; /* For the border effect */
+    transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+/* Specific styling for the "Ota yhteyttä" in the header (if needed) */
+nav ul li:first-child a {
+    border-bottom: 2px solid #555; /* Underline for "Ota yhteyttä" */
+}
+
+nav ul li a:hover {
+    color: #000; /* Darker on hover */
+    border-color: #000; /* Underline darker on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('/static/images/terrace-bg.jpg');
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    color: #fff; /* White text over the image */
+    text-align: center;
+    padding: 100px 20px; /* Top/bottom padding */
+    min-height: 400px; /* Minimum height for the section */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for text readability */
+    padding: 30px 40px;
+    border-radius: 8px;
+}
+
+.hero-section h1 {
+    font-size: 3em; /* Large heading */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for readability */
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #fff; /* White background for default buttons */
+    color: #333; /* Dark text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #ccc; /* Subtle border */
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.btn-dark {
+    background-color: #333; /* Dark background for specific buttons */
+    color: #fff; /* White text */
+    border: 1px solid #333;
+}
+
+.btn-dark:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Slightly off-white background */
+}
+
+.about-section p {
+    font-size: 1.2em;
+    max-width: 800px; /* Limit paragraph width for readability */
+    margin: 0 auto 30px auto; /* Center paragraph and add bottom margin */
+    color: #666;
+}
+
+/* Footer (optional) */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack logo and nav vertically */
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Adjust vertical margin for stacked items */
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+}
