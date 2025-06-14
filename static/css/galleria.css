@@ -1,0 +1,44 @@
+.picframe {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for text readability */
+    padding: 30px 40px;
+    border-radius: 8px;    
+    margin: 0 auto 30px auto;
+
+}
+.pic {
+    font-size: 1.5em; /* Larger font for the logo */
+    font-weight: 700; /* Bold */
+    color: #000; /* Darker color */
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Center the container */
+}
+
+.picture {
+    height: 2px; /* Adjust logo icon size */
+    margin-right: 2px;
+}
+
+
+.image-gallery {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid columns */
+    gap: 20px; /* Space between images */
+    margin: 40px auto; /* Margin above/below gallery, center it */
+    max-width: 900px; /* Max width for the gallery */
+    padding: 0 10px; /* Add some padding for smaller screens */
+}
+
+.gallery-img {
+    width: 100%; /* Images take full width of their grid cell */
+    height: 200px; /* Fixed height for images, adjust as needed */
+    object-fit: cover; /* Crop images to fit without distortion */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery-img:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Stronger shadow on hover */
+}

@@ -119,7 +119,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: #f0f0f0;
+    background-color: #b6b0b0;
     color: #000;
 }
 
@@ -149,6 +149,41 @@ nav ul li a:hover {
     color: #666;
 }
 
+.image-gallery {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid columns */
+    gap: 20px; /* Space between images */
+    margin: 40px auto; /* Margin above/below gallery, center it */
+    max-width: 900px; /* Max width for the gallery */
+    padding: 0 10px; /* Add some padding for smaller screens */
+}
+
+.gallery-img {
+    width: 100%; /* Images take full width of their grid cell */
+    height: 200px; /* Fixed height for images, adjust as needed */
+    object-fit: cover; /* Crop images to fit without distortion */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery-img:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Stronger shadow on hover */
+}
+
+.btncenter {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #fff; /* White background for default buttons */
+    color: #333; /* Dark text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #ccc; /* Subtle border */
+    align-self: center;
+}
 /* Footer */
 footer {
     background-color: #333;

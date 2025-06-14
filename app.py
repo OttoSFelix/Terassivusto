@@ -34,3 +34,7 @@ def hinnasto():
 @app.route('/info')
 def info():
     return render_template('info.html')
+
+@app.route('/galleria')
+def galleria():
+    return render_template('galleria.html')

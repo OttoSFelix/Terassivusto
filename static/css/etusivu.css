@@ -42,6 +42,28 @@ header {
     margin-right: 10px;
 }
 
+
+.picframe {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for text readability */
+    padding: 30px 40px;
+    border-radius: 8px;    
+    margin: 0 auto 30px auto;
+
+}
+.pic {
+    font-size: 1.5em; /* Larger font for the logo */
+    font-weight: 700; /* Bold */
+    color: #000; /* Darker color */
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Center the container */
+}
+
+.picture {
+    height: 20px; /* Adjust logo icon size */
+    margin-right: 10px;
+}
+
 nav ul {
     list-style: none; /* Remove bullet points from list */
     margin: 0;
@@ -133,6 +155,21 @@ nav ul li a:hover {
     color: #fff;
 }
 
+.btncenter {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #fff; /* White background for default buttons */
+    color: #333; /* Dark text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #ccc; /* Subtle border */
+    align-self: center;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    flex-wrap: wrap;
+}
 
 /* About Section */
 .about-section {
