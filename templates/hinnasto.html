@@ -19,4 +19,71 @@
         </div>
     </div>
 </section>
+
+<section class="contact-section">
+    <div class="container">
+        <h2>Hintalaskuri</h2>
+
+        <div class="contact-info">
+            <div class="searchbtn btn-dark">
+                <p>Terassin koko m^2:  <input type="number" id="size" name="size" style="width: 100px;"></p>
+            </div>
+            <p>Pesu:<span id="Pesu"></span></p>
+            <p>Öljyäminen:<span id="Öljy"></span></p>
+            <p>Pesu + öljyäminen:<span id="Pesu+öljy"></span></p>
+            <p>Hionta:<span id="Hionta"></span></p>
+            <p>Pesu + öljyäminen + hionta:<span id="Kaikki"></span></p>
+        </div>
+    </div>
+</section>
+<script>
+    // Funktio tekstikentän syötteen näyttämiseen reaaliaikaisesti
+    function setupInstantDisplay(inputId, displayId, displayId2, displayId3, displayId4, displayId5) {
+        const inputElement = document.getElementById(inputId);
+        const displayPesu = document.getElementById(displayId);
+        const displayÖljy = document.getElementById(displayId2);
+        const displayPesuöljy = document.getElementById(displayId3);
+        const displayHionta = document.getElementById(displayId4);
+        const displayKaikki = document.getElementById(displayId5);
+
+        if (inputElement && displayPesu && displayÖljy && displayPesuöljy && displayHionta && displayKaikki) {
+            // Päivitä näyttö heti, kun syöte muuttuu (kirjoitettaessa)
+            inputElement.addEventListener('input', function() {
+                displayPesu.textContent = inputElement.value;
+                displayÖljy.textContent = inputElement.value;
+                displayPesuöljy.textContent = inputElement.value;
+                displayHionta.textContent = inputElement.value;
+                displayKaikki.textContent = inputElement.value;
+                if (inputElement.value > 0 && inputElement.value < 15) {
+                    index = 0
+                }
+                else if (inputElement.value >= 15 && inputElement.value < 25) {
+                    index = 1
+                }
+                else if (inputElement.value >= 25 && inputElement.value < 35) {
+                    index = 2
+                }
+                else if (inputElement.value >= 35 && inputElement.value < 50) {
+                    index = 3
+                }
+                const hinnat = ['lol', 'hahaa', 'iso', 'jeeeeesss'];
+                let hinta = hinnat[index];
+                displayPesu.textContent = hinta;
+                displayÖljy.textContent = hinta;
+                displayPesuöljy.textContent = hinta;
+                displayHionta.textContent = hinta;
+                displayKaikki.textContent = hinta;
+
+            });
+            // Alusta näyttö, jos kentässä on jo arvo (esim. selaimen täyttö)
+            displayElement.textContent = inputElement.value;
+
+        }
+    }
+
+    // Kutsu funktiota jokaiselle tekstikentälle
+    document.addEventListener('DOMContentLoaded', function() {
+        setupInstantDisplay('size', 'Pesu', 'Öljy', 'Pesu+öljy', 'Hionta', 'Kaikki');
+    });
+</script>
 {% endblock %}

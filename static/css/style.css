@@ -134,6 +134,17 @@ nav ul li a:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
     border: 1px solid #ccc; /* Subtle border */
 }
+.searchbtn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #fff; /* White background for default buttons */
+    color: #ddd;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #ccc; /* Subtle border */
+}
 
 .btn:hover {
     background-color: #b6b0b0;
