@@ -186,6 +186,26 @@ nav ul li a:hover {
     padding: 0 10px; /* Add some padding for smaller screens */
 }
 
+.image-gallery h3{
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading within the info box */
+}
+
+.contact-section {
+    padding: 5px 5px;
+    text-align:center;
+    background-color: #fff;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
 .gallery-img {
     width: 100%; /* Images take full width of their grid cell */
     height: 200px; /* Fixed height for images, adjust as needed */

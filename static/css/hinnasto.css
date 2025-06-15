@@ -30,6 +30,11 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.contact-right{
+    text-align: right;
+
+}
+
 .contact-info h3 {
     font-size: 1.8em;
     color: #333;
@@ -74,18 +79,6 @@
     color: #333;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form textarea {
-    width: 200%;
-    padding: 24px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    font-family: 'Montserrat', sans-serif;
-}
 
 .contact-form textarea {
     resize: vertical; /* Allow vertical resizing */
@@ -100,3 +93,152 @@
     font-size: 1.1em;
 }
 
+/* Styles specific to the pricing page */
+.pricing-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.pricing-hero h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.pricing-hero p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    color: #555;
+}
+
+/* Uusi hintalaatikko-osio */
+.price-overview-section {
+    padding: 40px 20px;
+    background-color: #fff; /* Valkoinen tausta laatikolle */
+    text-align: center;
+}
+
+.price-overview-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.price-box {
+    background-color: #f0f0f0; /* Laatikon taustaväri */
+    border-radius: 8px;
+    padding: 20px; /* Pienempi padding, koska rivit ovat sisällä */
+    max-width: 400px; /* Laatikon maksimileveys */
+    margin: 0 auto; /* Keskitä laatikko */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Hienovarainen varjo */
+
+    display: flex; /* Tee tästä flex-säiliö */
+    flex-direction: column; /* Järjestä lapset sarakkeittain (eli rivit allekkain) */
+    gap: 10px; /* Väli rivien välillä */
+}
+
+.price-box h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading within the info box */
+}
+
+.price-box p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.price-row {
+    display: flex; /* Tee jokaisesta rivistä flex-säiliö */
+    justify-content: space-between; /* Aseta elementit päihin */
+    align-items: center; /* Keskitä pystysuunnassa */
+    padding: 10px 0; /* Sisäinen täyte riveille */
+    border-bottom: 1px dashed #ccc; /* Hienovarainen erotin viiva */
+}
+
+.price-row:last-child {
+    border-bottom: none; /* Ei erotinviivaa viimeiselle riville */
+}
+
+/* Yleiset spaneille, jos niillä ei ole spesifimpää luokkaa */
+.price-row span {
+    flex: 1; /* Anna spaneille joustava leveys, jotta ne täyttävät tilan */
+    text-align: left; /* Oletustasaus vasemmalle */
+}
+
+/* Tarkemmat valitsimet otsikko- ja datarivien elementeille */
+.price-row .area-label,
+.price-row .area-value {
+    text-align: left;
+}
+
+.price-row .price-label,
+.price-row .price-value {
+    text-align: right; /* Hinta-arvot oikealle */
+}
+
+.price-row.header-row {
+    font-weight: 700;
+    font-size: 1.1em;
+    padding-bottom: 15px; /* Enemmän tilaa otsikkoriville */
+    border-bottom: 2px solid #ccc; /* Paksumpi viiva otsikon alle */
+    color: #333;
+}
+
+.price-row.data-row {
+    font-size: 1em;
+    color: #555;
+}
+
+.price-row .price-value {
+    font-size: 1.2em; /* Suurempi koko arvoille */
+    font-weight: 700;
+    color: #333;
+}
+
+.price-row .area-label {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Calculator Section styles remain the same */
+.calculator-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Tausta hinnastolle */
+}
+
+.calculator-section h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.calculator-section p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .price-box {
+        padding: 15px;
+    }
+    .price-row {
+        flex-direction: row; /* Keep as row, but adjust content */
+        font-size: 0.9em;
+    }
+    .price-row.header-row {
+        font-size: 1em;
+    }
+    .price-row .price-value {
+        font-size: 1.1em;
+    }
+}

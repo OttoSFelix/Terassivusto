@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Terassien Pesu Espoo - Etusivu{% endblock %}
+{% block title %}Urbaanipihat - Etusivu{% endblock %}
 
 {% block content %}
 <section class="hero-section">
@@ -10,7 +10,7 @@
         Your browser does not support the video tag.
     </video>
     <div class="hero-content">
-        <h1>Terassien pesu Espoo</h1>
+        <h1>Urbaanipihat</h1>
         <div class="hero-buttons">
             <a href="/yhteystiedot" class="btn">Ota yhteyttä</a>
             <a href="/hinnasto" class="btn">Hinnasto ja palvelualue</a>
@@ -21,11 +21,14 @@
 
 <section class="about-section">
     <div class="container">
-        <p>Pesemme ja öljyämme terasseja Espoossa</p>
+        <p>Tervetuloa Urbaanipihoille - laadukasta ulkotilojen huoltoa ja pintakäsittelyä pääkaupunkiseudulla.
+            Erikoisosaamistamme ovat terassien öljyämiset, pesut ja pintojen kunnostus. Aina tarkasti, siististi ja asiakkaan toiveiden mukaan.
+            Tilaa maksuton kartoitus jotta pihasi tekee vaikutuksen joka suunnasta!
+            </p>
         <div class="image-gallery">
-            <img src="{{ url_for('static', filename='images/testiterassi.jpg') }}" alt="Pesty terassi 1" class="gallery-img">
-            <img src="{{ url_for('static', filename='images/testiterassi2.jpg') }}" alt="Öljytty terassi 2" class="gallery-img">
-            <img src="{{ url_for('static', filename='images/testiterassi3.jpeg') }}" alt="Terassin huolto 3" class="gallery-img">
+            <img src="{{ url_for('static', filename='images/terassi5j.jpeg') }}" alt="Pesty terassi 1" class="gallery-img">
+            <img src="{{ url_for('static', filename='images/terassi3j.jpeg') }}" alt="Öljytty terassi 2" class="gallery-img">
+            <img src="{{ url_for('static', filename='images/terassi7j.jpeg') }}" alt="Terassin huolto 3" class="gallery-img">
         </div>
         <a href="{{ url_for('galleria') }}" class="btn btn-dark">Galleria</a>
         
