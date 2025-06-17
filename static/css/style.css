@@ -28,6 +28,10 @@ header {
     text-decoration: none;
 }
 
+.small-text {
+    font-size: 0.7em;
+}
+
 .header-content {
     display: flex; /* Use flexbox for alignment */
     justify-content: space-between; /* Space out logo and nav */
