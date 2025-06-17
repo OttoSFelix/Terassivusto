@@ -47,6 +47,11 @@ header {
 }
 
 .logo-icon {
+    height: 30px; /* Adjust logo icon size */
+    margin-right: 10px;
+}
+
+.icon {
     height: 100px; /* Adjust logo icon size */
     margin-right: 10px;
 }
