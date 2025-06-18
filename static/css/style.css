@@ -1,15 +1,22 @@
 /* Basic Resets & Fonts */
+html {
+    /* Ensures 1rem is always 16px, preventing zoom from changing base font size */
+    font-size: 100%;
+}
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif; /* Using a Google Font, or use a system font */
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 1200px; /* Max width for content, adjust as needed */
     margin: 0 auto; /* Center the container */
     padding: 0 20px; /* Add some padding on the sides */
+    box-sizing: border-box;
 }
 
 /* Header */
@@ -44,6 +51,8 @@ header {
     color: #000; /* Darker color */
     display: flex;
     align-items: center;
+    min-width: 150px; /* Ensure logo has minimum width on small screens */
+    margin-right: 20px;
 }
 
 .logo-icon {
@@ -61,11 +70,18 @@ header {
     margin-right: 10px;
 }
 
+nav {
+    flex-grow: 1; /* Allow nav to take available space */
+    text-align: right; /* Align nav items to the right by default */
+}
+
 nav ul {
     list-style: none; /* Remove bullet points from list */
     margin: 0;
     padding: 0;
     display: flex; /* Make nav items display in a row */
+    justify-content: flex-end; /* Align nav items to the end (right) */
+    flex-wrap: wrap; /* Allow nav items to wrap */
 }
 
 nav ul li {
@@ -78,6 +94,7 @@ nav ul li a {
     font-weight: 500;
     padding-bottom: 5px; /* For the border effect */
     transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+    white-space: nowrap;
 }
 
 /* Specific styling for the active page in the header */
@@ -93,8 +110,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero-section {
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the image */
+    position: relative;
     color: #fff; /* White text over the image */
     text-align: center;
     padding: 100px 20px; /* Top/bottom padding */
@@ -102,6 +118,7 @@ nav ul li a:hover {
     display: flex; /* Use flexbox to center content */
     align-items: center; /* Vertically center */
     justify-content: center; /* Horizontally center */
+    overflow: hidden;
 }
 
 .hero-video {
@@ -118,21 +135,24 @@ nav ul li a:hover {
 }
 
 .hero-content {
-
     padding: 30px 40px;
     border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    max-width: 90%;
 }
 
 .hero-section h1 {
     font-size: 3em; /* Large heading */
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for readability */
+    word-break: break-word;
 }
 
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between buttons */
+    gap: 15px; /* Space between buttons */
     flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
@@ -147,6 +167,7 @@ nav ul li a:hover {
     font-weight: 700;
     transition: background-color 0.3s ease, color 0.3s ease;
     border: 1px solid #ccc; /* Subtle border */
+    font-size: 0.95em;
 }
 .searchbtn {
     display: inline-block;
@@ -189,6 +210,7 @@ nav ul li a:hover {
     max-width: 800px; /* Limit paragraph width for readability */
     margin: 0 auto 30px auto; /* Center paragraph and add bottom margin */
     color: #666;
+    word-wrap: break-word;
 }
 
 .image-gallery {
@@ -198,6 +220,7 @@ nav ul li a:hover {
     margin: 40px auto; /* Margin above/below gallery, center it */
     max-width: 900px; /* Max width for the gallery */
     padding: 0 10px; /* Add some padding for smaller screens */
+    box-sizing: border-box;
 }
 
 .image-gallery h3{
@@ -286,5 +309,23 @@ footer {
     .image-gallery {
         grid-template-columns: 1fr; /* Single column on very small screens */
         max-width: 400px; /* Limit width for single column on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-content {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 1.3em;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
     }
 }
