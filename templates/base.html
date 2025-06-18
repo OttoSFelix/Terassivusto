@@ -42,6 +42,22 @@
             <p>&copy; 2025 Urbaanipihat. Kaikki oikeudet pidätetään.</p>
         </div>
     </footer>
+    <script>
+        // JavaScript for hide on scroll header
+        let lastScrollY = 0;
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight; // Get header height dynamically
 
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > headerHeight) {
+                // Scrolling down and past header height
+                header.classList.add('hidden');
+            } else {
+                // Scrolling up or at the top
+                header.classList.remove('hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
 </body>
 </html>
