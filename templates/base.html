@@ -46,7 +46,7 @@
             const currentScrollY = window.scrollY;
 
             // 1. Logic for Hiding/Showing the header (Roll up)
-            if (currentScrollY > lastScrollY && currentScrollY > headerHeight) {
+            if (currentScrollY > lastScrollY && currentScrollY > 10) {
                 // Scrolling down and past header height -> Hide
                 header.classList.add('hidden');
             } else {
