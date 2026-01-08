@@ -28,11 +28,11 @@ header {
     position: sticky; /* Makes the header stick to the top when scrolling */
     top: 0;
     z-index: 1000; /* Ensures it stays on top of other content */
-    transition: top 0.3s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 
 header.hidden {
-    top: -1000px; /* Adjust this value if your header is taller */
+    transform: translateY(-100%);
 }
 
 .otsikko {
@@ -571,12 +571,12 @@ header.transparent-header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    transition: top 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* FIX: Ensure the hidden state works even on the transparent header */
 header.transparent-header.hidden {
-    top: -150px;
+    transform: translateY(-100%);
 }
 
 /* REMOVED: The logo filter rule (header.transparent-header .logo img { ... }) 
