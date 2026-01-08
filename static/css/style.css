@@ -32,7 +32,7 @@ header {
 }
 
 header.hidden {
-    top: -550px; /* Adjust this value if your header is taller */
+    top: -1000px; /* Adjust this value if your header is taller */
 }
 
 .otsikko {
