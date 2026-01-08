@@ -5,23 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>{% block title %}Urbaanipihat{% endblock %}</title>
-    <!-- Link to the main stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <!-- Google Fonts for consistent typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Placeholder for page-specific CSS -->
     {% block extra_css %}{% endblock %}
 </head>
 <body>
 
-    <header>
+    <header class="{% block header_class %}{% endblock %}">
         <div class="container header-content">
             <div class="logo">
                 <a href="/etusivu" class="otsikko"><img src="{{ url_for('static', filename='images/Urbaanipihat_logo.png') }}" alt="Logo" class="logo-font"></a>
             </div>
             <nav>
                 <ul>
-                    <!-- Navigation links, with 'active' class for current page -->
                     <li><a href="/etusivu" class="{% if request.endpoint == 'etusivu' %}active{% endif %}">Etusivu</a></li>
                     <li><a href="/yhteystiedot" class="{% if request.endpoint == 'yhteystiedot' %}active{% endif %}">Ota yhteyttä</a></li>
                     <li><a href="/hinnasto" class="{% if request.endpoint == 'hinnasto' %}active{% endif %}">Hinnasto ja palvelualue</a></li>
@@ -32,7 +28,6 @@
     </header>
 
     <main>
-        <!-- This block will be filled by child templates -->
         {% block content %}{% endblock %}
     </main>
 
@@ -42,20 +37,33 @@
         </div>
     </footer>
     <script>
-        // JavaScript for hide on scroll header
+        // JavaScript for hide on scroll header AND transparent background toggle
         let lastScrollY = 0;
         const header = document.querySelector('header');
-        const headerHeight = header.offsetHeight; // Get header height dynamically
+        const headerHeight = header.offsetHeight; 
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY > lastScrollY && window.scrollY > headerHeight) {
-                // Scrolling down and past header height
+            const currentScrollY = window.scrollY;
+
+            // 1. Logic for Hiding/Showing the header (Roll up)
+            if (currentScrollY > lastScrollY && currentScrollY > headerHeight) {
+                // Scrolling down and past header height -> Hide
                 header.classList.add('hidden');
             } else {
-                // Scrolling up or at the top
+                // Scrolling up -> Show
                 header.classList.remove('hidden');
             }
-            lastScrollY = window.scrollY;
+
+            // 2. Logic for Scrolled Background (Transparency toggle)
+            if (currentScrollY > 500) {
+                // If scrolled down more than 50px, add 'scrolled' class (makes bg white)
+                header.classList.add('scrolled');
+            } else {
+                // If at top, remove 'scrolled' class (makes bg transparent if on home)
+                header.classList.remove('scrolled');
+            }
+
+            lastScrollY = currentScrollY;
         });
     </script>
 </body>

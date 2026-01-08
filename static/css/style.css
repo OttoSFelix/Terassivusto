@@ -21,7 +21,7 @@ body {
 
 /* Header */
 header {
-    background-color: #fff; /* White background */
+    background-color: transparent;
     padding: 15px 0;
     border-bottom: 1px solid #eee; /* Subtle border at the bottom */
     box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow */
@@ -32,7 +32,7 @@ header {
 }
 
 header.hidden {
-    top: -150px; /* Adjust this value if your header is taller */
+    top: -250px; /* Adjust this value if your header is taller */
 }
 
 .otsikko {
@@ -559,4 +559,113 @@ footer {
     .lower-hero h2 {
         font-size: 2em;
     }
+}
+
+header.transparent-header {
+    background-color: transparent;
+    border-bottom: none;
+    box-shadow: none;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* FIX: Ensure the hidden state works even on the transparent header */
+header.transparent-header.hidden {
+    top: -150px;
+}
+
+/* REMOVED: The logo filter rule (header.transparent-header .logo img { ... }) 
+   is deleted so the logo keeps its original colors.
+*/
+
+/* --- Text Colors when Transparent (At the Top) --- */
+/* Only apply white text when NOT scrolled */
+header.transparent-header:not(.scrolled) nav ul li a,
+header.transparent-header:not(.scrolled) .otsikko {
+    color: #fff;
+    font: bold;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Adds readability over video */
+}
+
+header.transparent-header:not(.scrolled) nav ul li a.active {
+    border-bottom-color: #fff;
+    color: #fff;
+}
+
+header.transparent-header:not(.scrolled) nav ul li a:hover {
+    color: #ddd;
+    border-color: #ddd;
+}
+
+/* --- Scrolled State (When scrolling down/up past the video) --- */
+/* Restores the white background so the header is readable over white content */
+header.transparent-header.scrolled {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #eee;
+}
+
+/* --- Added rules for new homepage sections (from previous request) --- */
+
+.process-section {
+    /* Correct relative path for CSS file location */
+    background-image: url('../images/Terassi_tausta_placeholder.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.process-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.process-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.process-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 50px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.lower-hero {
+    background-image: url('../images/Terassi_tausta_placeholder.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 20px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    margin-top: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.lower-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 1;
 }
