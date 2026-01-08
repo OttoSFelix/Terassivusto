@@ -17,13 +17,12 @@
     <header>
         <div class="container header-content">
             <div class="logo">
-                <!-- Link to logo image, assuming it's in static/images -->
-                <img src="{{ url_for('static', filename='images/icon.png') }}" alt="Logo" class="icon">
-                <a href="/etusivu" class="otsikko"><img src="{{ url_for('static', filename='images/logo-placeholder.png') }}" alt="Logo" class="logo-font"></a>
+                <a href="/etusivu" class="otsikko"><img src="{{ url_for('static', filename='images/Urbaanipihat_logo.png') }}" alt="Logo" class="logo-font"></a>
             </div>
             <nav>
                 <ul>
                     <!-- Navigation links, with 'active' class for current page -->
+                    <li><a href="/etusivu" class="{% if request.endpoint == 'etusivu' %}active{% endif %}">Etusivu</a></li>
                     <li><a href="/yhteystiedot" class="{% if request.endpoint == 'yhteystiedot' %}active{% endif %}">Ota yhteyttä</a></li>
                     <li><a href="/hinnasto" class="{% if request.endpoint == 'hinnasto' %}active{% endif %}">Hinnasto ja palvelualue</a></li>
                     <li><a href="/info" class="{% if request.endpoint == 'info' %}active{% endif %}">Tietoa meistä</a></li>

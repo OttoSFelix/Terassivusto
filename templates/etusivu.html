@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}Urbaanipihat - Etusivu{% endblock %}
-
 {% block content %}
 <section class="hero-section">
     <video autoplay loop muted playsinline class="hero-video">
-        <source src="{{ url_for('static', filename='videos/Terassivideo.mp4') }}" type="video/mp4">
-        <source src="{{ url_for('static', filename='videos/Terassivideo.webm') }}" type="video/webm">
+        <source src="{{ url_for('static', filename='videos/Terassivideo2.mp4') }}" type="video/mp4">
+        <source src="{{ url_for('static', filename='videos/Terassivideo2.webm') }}" type="video/webm">
         Your browser does not support the video tag.
     </video>
     <div class="hero-content">
@@ -19,65 +18,64 @@
     </div>
 </section>
 
-<section class="about-section">
-    <div class="container">
-        <p>Tervetuloa Urbaanipihoille - laadukasta ulkotilojen huoltoa ja pintakäsittelyä pääkaupunkiseudulla.
-            Erikoisosaamistamme ovat terassien öljyämiset, pesut ja pintojen kunnostus. Aina tarkasti, siististi ja asiakkaan toiveiden mukaan.
-            Tilaa maksuton kartoitus jotta pihasi tekee vaikutuksen joka suunnasta!
-            </p>
-        <div>
-            &nbsp;
-            <div>
-                <h3>“Näin työ etenee” - prosessikuvaus:</h3>
+<section class="content-section">
+    <div class="intro-container">
+        <div class="intro-text">
+            <h2>Terassit, jotka erottuvat.</h2>
+            <p>Tervetuloa Urbaanipihoille. Tarjoamme laadukasta ulkotilojen huoltoa ja pintakäsittelyä pääkaupunkiseudulla. Erikoisosaamistamme ovat terassien öljyämiset, pesut ja pintojen kunnostus – aina tarkasti, siististi ja toiveidesi mukaan.</p>
+            
+            <div class="highlight-box">
+                <h3>Maksuton kartoitus</h3>
+                <p>Sovitaan ilmainen käynti, jossa arvioimme terassin kunnon ja annamme selkeän tarjouksen. Kartoitus on maksuton, kun työ tilataan.</p>
             </div>
-            &nbsp;
-        </div>
-        <div>
-            &nbsp;
-            <div>
-                1. Ota meihin yhteyttä. Voit ottaa yhteyttä lomakkeella, WhatsAppilla tai sähköpostitse. Kerro lyhyesti kohteesta, esimerkiksi pinta-ala ja sijainti.
-            </div>
-            &nbsp;
-        </div>
-        <div>
-            &nbsp;
-            <div>
-                2. Maksuton kartoitus. Sovitaan ilmainen kartoituskäynti, jossa arvioimme terassin kunnon ja tarvittavat toimenpiteet. Saat samalla selkeän hinta-arvion.
+            
+            <div style="margin-top: 30px;">
+                <a href="/galleria" class="btn btn-dark">Katso Galleria</a>
             </div>
         </div>
-        <div class="small-text">
-            Kartoitus on maksuton, kun työ tilataan. Muuten veloitamme 20 € arviointikäynnistä kattamaan matkakulut ja ajan. 
+        <div class="intro-image">
+            <img src="{{ url_for('static', filename='images/Terassikuva_placeholder.png') }}" alt="Moderni terassi">
         </div>
-        <div>
-            &nbsp;
-            <div>
-                3. Suunnittelu ja sävyn valinta. Autamme valitsemaan sopivan öljysävyn tai muun käsittelyn - tarvittaessa teemme testikohdan.
-            </div>
-            &nbsp;
-        </div>
-        <div>
-            &nbsp;
-            <div>
-                4. Työn toteutus. Saavumme sovittuna päivänä, suojaamme ympäristön ja teemme työn huolellisesti alusta loppuun. Käytämme laadukkaita materiaaleja ja tarkkoja työmenetelmiä.
-            </div>
-            &nbsp;
-        </div>
-        <div>
-            &nbsp;
-            <div>
-                5. Siisti lopputulos ja tarkistus. Siivoamme jälkemme ja käymme työn tuloksen vielä yhdessä läpi. Vasta kun olet tyytyväinen, olemme valmiit.
-            </div>
-            &nbsp;
-        </div>
-        <div class="image-gallery">
-            <img src="{{ url_for('static', filename='images/terassi5j.jpeg') }}" alt="Pesty terassi 1" class="gallery-img">
-            <img src="{{ url_for('static', filename='images/terassi3j.jpeg') }}" alt="Öljytty terassi 2" class="gallery-img">
-            <img src="{{ url_for('static', filename='images/terassi7j.jpeg') }}" alt="Terassin huolto 3" class="gallery-img">
-        </div>
-        <a href="{{ url_for('galleria') }}" class="btn btn-dark">Galleria</a>
-        
     </div>
 </section>
 
+<section class="process-section">
+    <div class="container">
+        <h2>Näin työ etenee</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="step-number">01</span>
+                <h3>Yhteydenotto</h3>
+                <p>Ota meihin yhteyttä. Voit ottaa yhteyttä lomakkeella, WhatsAppilla tai sähköpostitse. Kerro lyhyesti kohteesta, esimerkiksi pinta-ala ja sijainti..</p>
+            </div>
+            <div class="service-card">
+                <span class="step-number">02</span>
+                <h3>Kartoitus</h3>
+                <p>Maksuton kartoitus. Sovitaan ilmainen kartoituskäynti, jossa arvioimme terassin kunnon ja tarvittavat toimenpiteet. Saat samalla selkeän hinta-arvion.</p>
+            </div>
+            <div class="service-card">
+                <span class="step-number">03</span>
+                <h3>Suunnittelu</h3>
+                <p>Suunnittelu ja sävyn valinta. Autamme valitsemaan sopivan öljysävyn tai muun käsittelyn - tarvittaessa teemme testikohdan.</p>
+            </div>
+            <div class="service-card">
+                <span class="step-number">04</span>
+                <h3>Toteutus</h3>
+                <p>Työn toteutus. Saavumme sovittuna päivänä, suojaamme ympäristön ja teemme työn huolellisesti alusta loppuun. Käytämme laadukkaita materiaaleja ja tarkkoja työmenetelmiä.</p>
+            </div>
+            <div class="service-card">
+                <span class="step-number">05</span>
+                <h3>Lopputulos</h3>
+                <p>Siisti lopputulos ja tarkistus. Siivoamme jälkemme ja käymme työn tuloksen vielä yhdessä läpi. Vasta kun olet tyytyväinen, olemme valmiit.</p>
+            </div>
+        </div>
+        <div class="lower-content">
+            <h2>Pihasi ansaitsee parasta</h2>
+            <p>Varmista terassisi kunto ja kiilto ja tilaa ilmainen kartoituskäynti nyt.</p>
+            <a href="/yhteystiedot" class="cta-button">Ota yhteyttä</a>
+        </div>
+    </div>
+    </div>
+</section>
 
 {% endblock %}
