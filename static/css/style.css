@@ -62,8 +62,8 @@ header.hidden {
 }
 
 .logo-icon {
-    height: 30px; /* Adjust logo icon size */
-    margin-right: 10px;
+    height: 60px; /* Adjust logo icon size */
+    align-self: center;
 }
 
 .icon {
