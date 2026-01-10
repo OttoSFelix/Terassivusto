@@ -2,7 +2,10 @@
 .contact-section {
     padding: 60px 20px;
     text-align: center;
-    background-color: #fff;
+    background-image: url("../images/Terassi_brown.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .paksu-lause {
@@ -11,7 +14,7 @@
 
 .contact-section h2 {
     font-size: 2.5em;
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -19,11 +22,14 @@
     font-size: 1.1em;
     max-width: 1000px;
     margin: 0 auto 40px auto;
-    color: #555;
+    color: #fff;
 }
 
 .contact-info {
-    background-color: #f0f0f0;
+    background-image: url("../images/Terassi_brown.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 50px;
@@ -36,7 +42,7 @@
 
 .contact-info h3 {
     font-size: 1.8em;
-    color: #333;
+    color: #fff;
     margin-top: 0;
     margin-bottom: 20px;
     text-align: center; /* Center the heading within the info box */
@@ -44,7 +50,7 @@
 
 .contact-info p {
     font-size: 1.1em;
-    color: #444;
+    color: #fff;
     margin-bottom: 10px;
     line-height: 1.8;
 }
@@ -61,7 +67,7 @@
 
 .contact-form-container h3 {
     font-size: 1.8em;
-    color: #333;
+    color: #fff;
     margin-top: 0;
     margin-bottom: 30px;
     text-align: center; /* Center the heading within the form container */
@@ -75,7 +81,7 @@
     display: block; /* Labels on their own line */
     margin-bottom: 8px;
     font-weight: 600;
-    color: #333;
+    color: #fff;
 }
 
 .contact-form input[type="text"],

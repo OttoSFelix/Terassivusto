@@ -1,17 +1,15 @@
 {% extends "base.html" %}
 
 {% block title %}Urbaanipihat - Hinnasto ja palvelualue{% endblock %}
-
+{% block header_class %}transparent-header{% endblock %}
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/info.css') }}">
 {% endblock %}
 
 {% block content %}
-<a href="/etusivu" class="btn"><img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Logo" class="logo-icon"></a>
 <section class="contact-section">
     <div class="container">
         <h2>Tietoa meistä</h2>
-
         <div class="contact-info">
             <h3>Urbaanipihat on nuorekas ja vastuullinen pihapalvelu Espoosta.</h3>
                 <p class="paksu-lause">Meidän intohimona on palauttaa pihoille niiden alkuperäinen kauneus. Siististi, huolellisesti ja kestävästi.</p>
@@ -23,7 +21,6 @@
                         Toimimme luotettavasti, sovitussa aikataulussa ja selkeällä hinnoittelulla ilman yllätyksiä. Tarjoamme myös maksuttoman kartoituksen, jotta löydämme juuri sinun pihallesi sopivan ratkaisun.</p>
             </div>
             <p class="paksu-lause">Urbaanipihat - siisti piha, parempi fiilis.</p>
-                
         </div>
     </div>
 </section>
