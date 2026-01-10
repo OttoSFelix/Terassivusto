@@ -56,6 +56,7 @@
     border-radius: 50px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     text-align: left; /* Align form elements */
+    margin-top: 200px
 }
 
 .contact-form-container p {

@@ -29,6 +29,10 @@ def hinnasto():
 def info():
     return render_template('info.html')
 
+@app.route('/huolto')
+def huolto():
+    return render_template('huolto.html')
+
 @app.route('/galleria')
 def galleria():
     return render_template('galleria.html')

@@ -26,6 +26,16 @@ body {
     color: #ffffff
 }
 
+
+.top-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    margin-top: 200px
+}
+
 header {
     background-color: transparent;
     padding: 15px 0;

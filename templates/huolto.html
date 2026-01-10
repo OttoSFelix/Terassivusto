@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Urbaanipihat - Ota yhteyttä{% endblock %}
+{% block header_class %}transparent-header{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/yhteystiedot.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="contact-section">
+    <div class="contact-form-container">
+        <h2>Rakennus ja remontointi</h2>
+        <p>Teemme monenlaista terassin huoltoa ja remontointia jokaisen tyyppiselle terassille</p>
+
+        <div class="contact-info">
+            <h3>Info</h3>
+        </div>
+    </div>
+</section>
+{% endblock %}
