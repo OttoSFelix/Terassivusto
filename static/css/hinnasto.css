@@ -1,16 +1,21 @@
 .price-page {
-    color: #404040;
+    color: #e0e0e0;
+    background-color: #404040; /* Dark background for the whole page wrapper */
+    min-height: 100vh;
 }
 
 .contact-section {
     padding: 60px 20px;
     text-align: center;
-    background-color: #fff;
+    background-image: url("../images/Terassi_bg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Dark background */
 }
 
 .contact-section h2 {
     font-size: 2.5em;
-    color: #333;
+    color: #fff; /* White heading */
     margin-bottom: 20px;
 }
 
@@ -18,66 +23,72 @@
     font-size: 1.1em;
     max-width: 1000px;
     margin: 0 auto 40px auto;
-    color: #555;
+    color: #ccc; /* Light gray text */
 }
 
 .contact-info {
-    background-color: #f0f0f0;
+    background-color: #404040; /* Slightly lighter dark for info box */
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 50px;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left; /* Align text within the info box */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Darker shadow */
 }
 
 .contact-right{
     text-align: right;
-
 }
 
 .contact-info h3 {
     font-size: 1.8em;
-    color: #333;
+    color: #fff;
     margin-top: 0;
     margin-bottom: 20px;
-    text-align: center; /* Center the heading within the info box */
+    text-align: center; 
 }
 
 .contact-info p {
     font-size: 1.1em;
-    color: #444;
+    color: #ddd;
     margin-bottom: 10px;
     line-height: 1.8;
 }
 
-
-
 .contact-calculator p {
     font-size: 1.1em;
-    color: #ded4d4;
+    color: #ddd;
     margin-bottom: 10px;
     line-height: 1.8;
+}
+
+/* Style for the input field in the calculator */
+#size {
+    background-color: #444;
+    border: 1px solid #666;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 .contact-form-container {
     max-width: 900px;
     margin: 0 auto;
-    background-color: #f9f9f9;
+    background-color: #2d2d2d; /* Dark form container */
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: left; /* Align form elements */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-align: left; 
 }
 
 .contact-form-container h3 {
     font-size: 1.8em;
-    color: #333;
+    color: #fff;
     margin-top: 0;
     margin-bottom: 30px;
-    text-align: center; /* Center the heading within the form container */
+    text-align: center; 
 }
 
 .contact-form .form-group {
@@ -85,22 +96,24 @@
 }
 
 .contact-form label {
-    display: block; /* Labels on their own line */
+    display: block; 
     margin-bottom: 8px;
     font-weight: 600;
-    color: #333;
+    color: #ddd;
 }
 
-
 .contact-form textarea {
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical; 
     min-height: 120px;
+    background-color: #444;
+    border: 1px solid #666;
+    color: #fff;
 }
 
 .contact-form button.btn {
-    width: auto; /* Allow button to size naturally */
-    display: block; /* Place button on its own line */
-    margin: 30px auto 0 auto; /* Center the button below the form */
+    width: auto; 
+    display: block; 
+    margin: 30px auto 0 auto; 
     padding: 15px 30px;
     font-size: 1.1em;
 }
@@ -108,25 +121,25 @@
 .searchbtn {
     display: inline-block;
     padding: 12px 25px;
-    background-color: #fff; /* White background for default buttons */
-    color: #ddd;
+    background-color: #444; 
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 700;
     transition: background-color 0.3s ease, color 0.3s ease;
-    border: 1px solid #ccc; /* Subtle border */
+    border: 1px solid #555; 
 }
 
 /* Styles specific to the pricing page */
 .pricing-hero {
     text-align: center;
     padding: 60px 20px;
-    background-color: #f9f9f9;
+    background-color: #404040;
 }
 
 .pricing-hero h2 {
     font-size: 2.5em;
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -134,66 +147,69 @@
     font-size: 1.1em;
     max-width: 800px;
     margin: 0 auto 40px auto;
-    color: #555;
+    color: #ccc;
 }
 
 /* Uusi hintalaatikko-osio */
 .price-overview-section {
     padding: 40px 20px;
-    background-color: #fff; /* Valkoinen tausta laatikolle */
+    background-image: url("../images/Terassi_bg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
     text-align: center;
 }
 
 .price-overview-section h2 {
     font-size: 2.5em;
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
 }
 
 .price-box {
-    background-color: #f0f0f0; /* Laatikon taustaväri */
+    background-color: #404040; /* Dark card background */
     border-radius: 8px;
-    padding: 20px; /* Pienempi padding, koska rivit ovat sisällä */
-    max-width: 400px; /* Laatikon maksimileveys */
-    margin: 0 auto; /* Keskitä laatikko */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Hienovarainen varjo */
+    padding: 20px; 
+    max-width: 400px; 
+    margin: 0 auto; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
 
-    display: flex; /* Tee tästä flex-säiliö */
-    flex-direction: column; /* Järjestä lapset sarakkeittain (eli rivit allekkain) */
-    gap: 10px; /* Väli rivien välillä */
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
 }
 
 .price-box h3 {
     font-size: 1.8em;
-    color: #333;
+    color: #fff;
     margin-top: 0;
     margin-bottom: 20px;
-    text-align: center; /* Center the heading within the info box */
+    text-align: center; 
 }
 
 .price-box p {
     font-size: 1.1em;
-    color: #444;
+    color: #ddd;
     margin-bottom: 10px;
     line-height: 1.8;
 }
 
 .price-row {
-    display: flex; /* Tee jokaisesta rivistä flex-säiliö */
-    justify-content: space-between; /* Aseta elementit päihin */
-    align-items: center; /* Keskitä pystysuunnassa */
-    padding: 10px 0; /* Sisäinen täyte riveille */
-    border-bottom: 1px dashed #ccc; /* Hienovarainen erotin viiva */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 0; 
+    border-bottom: 1px dashed #555; /* Subtle dark divider */
 }
 
 .price-row:last-child {
-    border-bottom: none; /* Ei erotinviivaa viimeiselle riville */
+    border-bottom: none; 
 }
 
 /* Yleiset spaneille, jos niillä ei ole spesifimpää luokkaa */
 .price-row span {
-    flex: 1; /* Anna spaneille joustava leveys, jotta ne täyttävät tilan */
-    text-align: left; /* Oletustasaus vasemmalle */
+    flex: 1; 
+    text-align: left; 
 }
 
 /* Tarkemmat valitsimet otsikko- ja datarivien elementeille */
@@ -204,49 +220,49 @@
 
 .price-row .price-label,
 .price-row .price-value {
-    text-align: right; /* Hinta-arvot oikealle */
+    text-align: right; 
 }
 
 .price-row.header-row {
     font-weight: 700;
     font-size: 1.1em;
-    padding-bottom: 15px; /* Enemmän tilaa otsikkoriville */
-    border-bottom: 2px solid #ccc; /* Paksumpi viiva otsikon alle */
-    color: #333;
+    padding-bottom: 15px; 
+    border-bottom: 2px solid #555; 
+    color: #fff;
 }
 
 .price-row.data-row {
     font-size: 1em;
-    color: #555;
+    color: #ccc;
 }
 
 .price-row .price-value {
-    font-size: 1.2em; /* Suurempi koko arvoille */
+    font-size: 1.2em; 
     font-weight: 700;
-    color: #333;
+    color: #fff;
 }
 
 .price-row .area-label {
     font-size: 0.9em;
-    color: #666;
+    color: #aaa;
 }
 
-/* Calculator Section styles remain the same */
+/* Calculator Section styles remain the same but dark */
 .calculator-section {
     text-align: center;
     padding: 60px 20px;
-    background-color: #f9f9f9; /* Tausta hinnastolle */
+    background-color: #1a1a1a; 
 }
 
 .calculator-section h3 {
     font-size: 2em;
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
 }
 
 .calculator-section p {
     font-size: 1.1em;
-    color: #555;
+    color: #ccc;
     margin-bottom: 30px;
 }
 
@@ -256,7 +272,7 @@
         padding: 15px;
     }
     .price-row {
-        flex-direction: row; /* Keep as row, but adjust content */
+        flex-direction: row; 
         font-size: 0.9em;
     }
     .price-row.header-row {
