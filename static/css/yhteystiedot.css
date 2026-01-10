@@ -1,8 +1,11 @@
 /* Styles specific to the contact page */
 .contact-section {
-    padding: 60px 20px;
+    padding: 120px 20px;
     text-align: center;
-    background-color: #fff;
+    background-image: url("../images/Terassi_bg_hori.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
 }
 
 .contact-section h2 {
@@ -19,7 +22,7 @@
 }
 
 .contact-info {
-    background-color: #f0f0f0;
+    background-color: #404040;
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 50px;
@@ -31,16 +34,16 @@
 }
 
 .contact-info h3 {
-    font-size: 1.8em;
-    color: #333;
+    font-size: 2.0em;
+    color: #000;
     margin-top: 0;
     margin-bottom: 20px;
-    text-align: center; /* Center the heading within the info box */
+    text-align: left; /* Center the heading within the info box */
 }
 
 .contact-info p {
     font-size: 1.1em;
-    color: #444;
+    color: #fff;
     margin-bottom: 10px;
     line-height: 1.8;
 }
@@ -48,16 +51,23 @@
 .contact-form-container {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #f9f9f9;
+    background-color: #404040;
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     text-align: left; /* Align form elements */
 }
 
-.contact-form-container h3 {
-    font-size: 1.8em;
-    color: #333;
+.contact-form-container p {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.contact-form-container h2 {
+    font-size: 2.5em;
+    color: #000;
     margin-top: 0;
     margin-bottom: 30px;
     text-align: center; /* Center the heading within the form container */
@@ -67,12 +77,6 @@
     margin-bottom: 20px;
 }
 
-.contact-form label {
-    display: block; /* Labels on their own line */
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #333;
-}
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],

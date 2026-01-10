@@ -1,4 +1,7 @@
-/* Styles specific to the contact page */
+.price-page {
+    color: #404040;
+}
+
 .contact-section {
     padding: 60px 20px;
     text-align: center;
