@@ -1,5 +1,11 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 100%;
+    overflow-x: hidden; 
+    width: 100%;
 }
 
 body {
@@ -8,6 +14,8 @@ body {
     color: #404040;
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 .container {
@@ -140,7 +148,7 @@ nav ul li a:hover {
     padding: 30px 40px;
     border-radius: 8px;
     position: relative;
-    top: 150px;
+    top: 100px;
     z-index: 1;
     max-width: 90%;
 }
@@ -280,57 +288,6 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 50px;
-}
-
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        margin-top: 15px;
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    .hero-section h1 {
-        font-size: 2em;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .about-section p {
-        font-size: 1em;
-    }
-
-    .image-gallery {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section h1 {
-        font-size: 1.8em;
-    }
-
-    .hero-content {
-        padding: 15px 20px;
-    }
-
-    .logo {
-        font-size: 1.3em;
-    }
-
-    nav ul li a {
-        font-size: 0.9em;
-    }
 }
 
 .content-section {
@@ -541,14 +498,67 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .about-section p {
+        font-size: 1em;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
     .intro-container {
         flex-direction: column;
     }
+    
     .intro-text, .intro-image {
         width: 100%;
+        min-width: 0; 
     }
+    
     .lower-hero h2 {
         font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-content {
+        padding: 15px 20px;
+        top: 150px;
+    }
+
+    .logo {
+        font-size: 1.3em;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
     }
 }
 
