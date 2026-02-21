@@ -243,6 +243,7 @@ nav ul li a:hover {
     max-width: 900px;
     padding: 0 10px;
     box-sizing: border-box;
+    background-color: transparent;
 }
 
 .image-gallery h3{
@@ -536,6 +537,7 @@ footer {
     .image-gallery {
         grid-template-columns: 1fr;
         max-width: 400px;
+        background-color: transparent;
     }
 
     .intro-container {
