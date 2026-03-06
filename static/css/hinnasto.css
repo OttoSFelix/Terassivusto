@@ -7,7 +7,7 @@
 .contact-section {
     padding: 60px 20px;
     text-align: center;
-    background-image: url("../images/Terassi_bg.png");
+    background-image: url("../images/new_background.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Dark background */
@@ -153,7 +153,7 @@
 /* Uusi hintalaatikko-osio */
 .price-overview-section {
     padding: 40px 20px;
-    background-image: url("../images/Terassi_bg.png");
+    background-image: url("../images/new_background.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
