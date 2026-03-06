@@ -266,6 +266,37 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+.maintenance-section {
+    padding: 300px 20px 0px;
+    text-align: center;
+    background-image: url("../images/Terassi_bg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.gallery-contact-section {
+    padding: 300px 20px 30px;
+    text-align: center;
+    background-image: url("../images/Terassi_bg.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Dark background */
+}
+
+.gallery-contact-section h2 {
+    font-size: 2.5em;
+    color: #fff; /* White heading */
+    margin-bottom: 20px;
+}
+
+.gallery-contact-section p {
+    font-size: 1.1em;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    color: #ccc; /* Light gray text */
+}
+
 .gallery-img {
     width: 100%;
     height: 200px;
