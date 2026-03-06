@@ -47,7 +47,7 @@
 
         <section class="content-section">
             <div class="intro-container">
-                <div class="intro-text">
+                <div class="intro-text fade-in-section">
                     <h2>Terassit, jotka erottuvat.</h2>
                     <p>Tervetuloa Urbaanipihoille - laadukasta ulkotilojen huoltoa ja pintakäsittelyä pääkaupunkiseudulla.
         Erikoisosaamistamme ovat terassien öljyämiset, pesut ja pintojen kunnostus. Aina tarkasti, siististi ja asiakkaan toiveiden mukaan.
@@ -63,7 +63,7 @@
                         <a href="galleria.html" class="btn btn-dark">Katso Galleria</a>
                     </div>
                 </div>
-                <div class="intro-image">
+                <div class="intro-image fade-in-section">
                     <img src="./static/images/Terassi_kuva2.png" alt="Moderni terassi">
                 </div>
             </div>
@@ -71,46 +71,46 @@
 
         <section class="process-section">
             <div class="container">
-                <h2>Näin työ etenee</h2>
+                <h2 class="fade-in-section">Näin työ etenee</h2>
                 <div class="services-grid">
-                    <div class="service-card">
+                    <div class="service-card fade-in-section">
                         <span class="step-number">01</span>
                         <h3>Yhteydenotto</h3>
                         <p>Ota meihin yhteyttä. Voit ottaa yhteyttä lomakkeella, WhatsAppilla tai sähköpostitse. Kerro lyhyesti kohteesta, esimerkiksi pinta-ala ja sijainti..</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card fade-in-section">
                         <span class="step-number">02</span>
                         <h3>Kartoitus</h3>
                         <p>Maksuton kartoitus. Sovitaan ilmainen kartoituskäynti, jossa arvioimme terassin kunnon ja tarvittavat toimenpiteet. Saat samalla selkeän hinta-arvion.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card fade-in-section">
                         <span class="step-number">03</span>
                         <h3>Suunnittelu</h3>
                         <p>Suunnittelu ja sävyn valinta. Autamme valitsemaan sopivan öljysävyn tai muun käsittelyn - tarvittaessa teemme testikohdan.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card fade-in-section">
                         <span class="step-number">04</span>
                         <h3>Toteutus</h3>
                         <p>Työn toteutus. Saavumme sovittuna päivänä, suojaamme ympäristön ja teemme työn huolellisesti alusta loppuun. Käytämme laadukkaita materiaaleja ja tarkkoja työmenetelmiä.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card fade-in-section">
                         <span class="step-number">05</span>
                         <h3>Lopputulos</h3>
                         <p>Siisti lopputulos ja tarkistus. Siivoamme jälkemme ja käymme työn tuloksen vielä yhdessä läpi. Vasta kun olet tyytyväinen, olemme valmiit.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card fade-in-section">
                         <span class="step-number">06</span>
                         <h3>Jälkihoito ja ohjeistus</h3>
                         <p>Ohjeistamme jälkihoitoon ja terassin pinnan ja kunnon ylläpitoon.</p>
                     </div>
                 </div>
-                <div class="lower-content">
+                <div class="lower-content fade-in-section">
                     <h2>Pihasi ansaitsee parasta</h2>
                     <p>Varmista terassisi kunto ja kiilto ja tilaa ilmainen kartoituskäynti nyt.</p>
                     <a href="yhteystiedot.html" class="cta-button">Ota yhteyttä</a>
                 </div>
             </div>
-            <div class="intro-image">
+            <div class="intro-image fade-in-section">
                 <img src="./static/images/Urbaanipihat_logo.png" alt="Logo">
             </div>
         </section>
@@ -149,6 +149,26 @@
             }
 
             lastScrollY = currentScrollY;
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Optional: animate only once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach((section) => {
+            observer.observe(section);
         });
     </script>
 </body>

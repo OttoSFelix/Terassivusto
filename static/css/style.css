@@ -699,3 +699,15 @@ header.transparent-header.scrolled {
     background: rgba(0,0,0,0.8);
     z-index: 1;
 }
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
