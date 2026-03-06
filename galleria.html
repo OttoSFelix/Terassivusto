@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Urbaanipihat</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="transparent-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html" class="otsikko"><img src="./static/images/Urbaanipihat_logo.png" alt="Logo" class="logo-font"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Etusivu</a></li>
+                    <li><a href="yhteystiedot.html" class="">Ota yhteyttä</a></li>
+                    <li><a href="hinnasto.html" class="">Hinnasto ja palvelualue</a></li>
+                    <li><a href="info.html" class="">Tietoa meistä</a></li>
+                    <li><a href="huolto.html" class="">Rakennus & remontointi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <link rel="stylesheet" href="./static/css/hinnasto.css">
+        <section class="price-page">
+            <section class="contact-section">
+                <div class="container">
+                    <h2>Ennen huoltoa</h2>
+                </div>
+                <div class="image-gallery">
+                <img src="./static/images/terassi1e.jpeg" alt="Pesty terassi 1" class="gallery-img">
+                <img src="./static/images/terassi2e.jpeg" alt="Öljytty terassi 2" class="gallery-img">
+                <img src="./static/images/terassi3e.jpeg" alt="Terassin huolto 3" class="gallery-img">
+                <img src="./static/images/IMG_0053.jpg" alt="Terassin huolto 3" class="gallery-img">
+                <img src="./static/images/IMG_0059.jpg" alt="Terassin huolto 3" class="gallery-img">
+                <img src="./static/images/IMG_0158.jpg" alt="Terassin huolto 3" class="gallery-img">
+
+                </div>
+            </section>
+            <section class="contact-section">
+                <div class="container">
+                    <h2>Huollon jälkeen</h2>
+                </div>
+                <div class="image-gallery">
+                <img src="./static/images/terassi2j.jpeg" alt="Pesty terassi 1" class="gallery-img">
+                <img src="./static/images/terassi3j.jpeg" alt="Öljytty terassi 2" class="gallery-img">
+                <img src="./static/images/terassi4j.jpeg" alt="Terassin huolto 3" class="gallery-img">
+                <img src="./static/images/terassi1j.jpeg" alt="Pesty terassi 1" class="gallery-img">
+                <img src="./static/images/terassi5j.jpeg" alt="Öljytty terassi 2" class="gallery-img">
+                <img src="./static/images/terassi6j.jpeg" alt="Terassin huolto 3" class="gallery-img">
+                <img src="./static/images/terassi7j.jpeg" alt="Pesty terassi 1" class="gallery-img">
+                <img src="./static/images/terassi8j.jpeg" alt="Öljytty terassi 2" class="gallery-img">
+                <img src="./static/images/terassi9j.jpeg" alt="Terassin huolto 3" class="gallery-img">
+                <img src="./static/images/IMG_0299.jpg" alt="Terassin huolto 3" class="gallery-img">
+                <img src="./static/images/IMG_0308.jpg" alt="Terassin huolto 3" class="gallery-img">
+                <img src="./static/images/IMG_0327.jpg" alt="Terassin huolto 3" class="gallery-img">
+
+
+
+            </div>
+        </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Urbaanipihat. Kaikki oikeudet pidätetään.</p>
+        </div>
+    </footer>
+    <script>
+        // JavaScript for hide on scroll header AND transparent background toggle
+        let lastScrollY = 0;
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight; 
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            // 1. Logic for Hiding/Showing the header (Roll up)
+            if (currentScrollY > lastScrollY && currentScrollY > 10) {
+                // Scrolling down and past header height -> Hide
+                header.classList.add('hidden');
+            } else {
+                // Scrolling up -> Show
+                header.classList.remove('hidden');
+            }
+
+            // 2. Logic for Scrolled Background (Transparency toggle)
+            if (currentScrollY > 500) {
+                // If scrolled down more than 50px, add 'scrolled' class (makes bg white)
+                header.classList.add('scrolled');
+            } else {
+                // If at top, remove 'scrolled' class (makes bg transparent if on home)
+                header.classList.remove('scrolled');
+            }
+
+            lastScrollY = currentScrollY;
+        });
+    </script>
+</body>
+</html>

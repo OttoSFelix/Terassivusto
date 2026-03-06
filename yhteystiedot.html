@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Urbaanipihat</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="transparent-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html" class="otsikko"><img src="./static/images/Urbaanipihat_logo.png" alt="Logo" class="logo-font"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Etusivu</a></li>
+                    <li><a href="yhteystiedot.html" class="">Ota yhteyttä</a></li>
+                    <li><a href="hinnasto.html" class="">Hinnasto ja palvelualue</a></li>
+                    <li><a href="info.html" class="">Tietoa meistä</a></li>
+                    <li><a href="huolto.html" class="">Rakennus & remontointi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <link rel="stylesheet" href="./static/css/yhteystiedot.css">
+        <section class="contact-section">
+            <div class="contact-form-container">
+                <h2>Ota yhteyttä</h2>
+                <p>Voit ottaa meihin yhteyttä seuraavilla tavoilla. Vastaamme mahdollisimman pian!</p>
+
+                <div class="contact-info">
+                    <h3>Yhteystiedot:</h3>
+                    <p><strong>Puhelin: </strong>+358409693756</p>
+                    <p><strong>Sähköposti: </strong>henrik.suokas@gmail.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Urbaanipihat. Kaikki oikeudet pidätetään.</p>
+        </div>
+    </footer>
+    <script>
+        // JavaScript for hide on scroll header AND transparent background toggle
+        let lastScrollY = 0;
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight; 
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            // 1. Logic for Hiding/Showing the header (Roll up)
+            if (currentScrollY > lastScrollY && currentScrollY > 10) {
+                // Scrolling down and past header height -> Hide
+                header.classList.add('hidden');
+            } else {
+                // Scrolling up -> Show
+                header.classList.remove('hidden');
+            }
+
+            // 2. Logic for Scrolled Background (Transparency toggle)
+            if (currentScrollY > 500) {
+                // If scrolled down more than 50px, add 'scrolled' class (makes bg white)
+                header.classList.add('scrolled');
+            } else {
+                // If at top, remove 'scrolled' class (makes bg transparent if on home)
+                header.classList.remove('scrolled');
+            }
+
+            lastScrollY = currentScrollY;
+        });
+    </script>
+</body>
+</html>
