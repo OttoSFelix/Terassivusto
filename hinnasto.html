@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="./static/css/hinnasto.css">
         <section class="price-page">
             <section class="contact-section">
-                <div class="top-container">
+                <div class="top-container fade-in-section">
                     <h2>Hinnasto</h2>
                     <div class="contact-info">
                         <p>Selkeä ja kilpailukykyinen hinnoittelu. Ei piilokuluja. Alta löydät esimerkkihinnastomme yleisimmistä palveluistamme. Lopullinen hinta määräytyy paikan päällä tehtävän kartoituksen mukaan - näin varmistamme juuri sinun pihallesi sopivan ja oikeudenmukaisen tarjouksen.</p>
@@ -41,7 +41,7 @@
             </section>
             <section class="price-overview-section">
                 <div class="container">
-                    <div class="price-box">
+                    <div class="price-box fade-in-section">
                         <h3>Terassin huoltopaketti</h3>
                         <p>(sisältää painepesun + öljyämisen, materiaalit + työn)</p>
                         <!-- Otsikkorivi -->
@@ -76,7 +76,7 @@
             <section class="price-overview-section">
                 <div class="container">
                     <h2>Lisäpalvelut</h2>
-                    <div class="price-box">
+                    <div class="price-box fade-in-section">
                         <h3>Käsinhionta</h3>
                         <p>Terassin hiominen ei sisälly huoltopakettiin. Suosittelemme hiontaa, jos puupinta on kulunut, epätasainen tai jos haluat erityisen siistin ja sileän lopputuloksen.
                             Hiomme alustavasti käsin. Turvallisesti ja hallitusti.
@@ -113,7 +113,7 @@
 
             <section class="price-overview-section">
                 <div class="container">
-                    <div class="price-box">
+                    <div class="price-box fade-in-section">
                         <h3>Konehionta + öljyäminen</h3>
                         <p>Joskus paras lopputulos saadaan yhdistämällä koneellinen hionta ja uusi öljypinta. Tämä palvelu sisältää molemmat.</p>
                         <!-- Otsikkorivi -->
@@ -126,7 +126,7 @@
 
             <section class="price-overview-section">
                 <div class="container">
-                    <div class="price-box">
+                    <div class="price-box fade-in-section">
                         <h3>Parvekkeen, terassin tai muun erillinen pesu</h3>
                         <p>Sisältää tehokkaan painepesun ja pesuaineet.</p>
                         <!-- Otsikkorivi -->
@@ -159,7 +159,7 @@
             </section>
 
             <section class="contact-section">
-                <div class="container">
+                <div class="container fade-in-section">
                     <h2>Hintalaskuri</h2>
                     <div class="contact-info">
                         <div class="contact-calculator">
@@ -304,6 +304,26 @@
             }
 
             lastScrollY = currentScrollY;
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Optional: animate only once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach((section) => {
+            observer.observe(section);
         });
     </script>
 </body>

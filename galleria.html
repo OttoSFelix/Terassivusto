@@ -35,7 +35,7 @@
                 <div class="container">
                     <h2>Ennen huoltoa</h2>
                 </div>
-                <div class="image-gallery">
+                <div class="image-gallery fade-in-section">
                 <img src="./static/images/terassi1e.jpeg" alt="Pesty terassi 1" class="gallery-img">
                 <img src="./static/images/terassi2e.jpeg" alt="Öljytty terassi 2" class="gallery-img">
                 <img src="./static/images/terassi3e.jpeg" alt="Terassin huolto 3" class="gallery-img">
@@ -49,7 +49,7 @@
                 <div class="container">
                     <h2>Huollon jälkeen</h2>
                 </div>
-                <div class="image-gallery">
+                <div class="image-gallery fade-in-section">
                 <img src="./static/images/terassi2j.jpeg" alt="Pesty terassi 1" class="gallery-img">
                 <img src="./static/images/terassi3j.jpeg" alt="Öljytty terassi 2" class="gallery-img">
                 <img src="./static/images/terassi4j.jpeg" alt="Terassin huolto 3" class="gallery-img">
@@ -103,6 +103,26 @@
             }
 
             lastScrollY = currentScrollY;
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Optional: animate only once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach((section) => {
+            observer.observe(section);
         });
     </script>
 </body>

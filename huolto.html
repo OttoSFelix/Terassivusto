@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="./static/css/yhteystiedot.css">
         <link rel="stylesheet" href="./static/css/hinnasto.css">
         <section class="maintenance-section">
-            <div class="contact-form-container">
+            <div class="contact-form-container fade-in-section">
                 <h2>Laadukkaat piharakentamisen ja pienremonttien ratkaisut</h2>
                 <div class="contact-info">
                     <h3>Info</h3>
@@ -43,7 +43,7 @@
         <section class="price-page">
             <section class="price-overview-section">
                     <div class="container">
-                        <div class="price-box">
+                        <div class="price-box fade-in-section">
                         <h3>Terassien rakentaminen ja uudistaminen</h3>
                             <div class="price-row header-row">
                                 <p>- Uudet terassit alusta loppuun</p>
@@ -66,7 +66,7 @@
 
             <section class="price-overview-section">
                 <div class="container">
-                    <div class="price-box">
+                    <div class="price-box fade-in-section">
                         <h3>Aita- ja piharakenteet</h3>
                         <div class="price-row header-row">
                             <p>- Uudet aidat</p>
@@ -86,7 +86,7 @@
 
             <section class="price-overview-section">
                 <div class="container">
-                    <div class="price-box">
+                    <div class="price-box fade-in-section">
                         <h3>Pihauudistukset</h3>
                         <div class="price-row header-row">
                             <p>- Pienimuotoiset piharemontit</p>
@@ -106,7 +106,7 @@
 
             <section class="price-overview-section">
                 <div class="container">
-                    <div class="price-box">
+                    <div class="price-box fade-in-section">
                         <h3>Valikoidut pienremontit</h3>
                         <div class="price-row header-row">
                             <p>- WC- ja kodinhoitotilojen pintaremontit</p>
@@ -126,14 +126,14 @@
 
             <section class="price-overview-section">
                 <div class="container">
-                    <div class="price-box">
+                    <div class="price-box fade-in-section">
                         <p>Sisäremonteissa työ tehdään kokeneiden ammattilaisten kanssa, ja projektin koordinointi hoidetaan alusta loppuun.</p>
                     </div>
                 </div>
             </section>
         </section>
         <section class="contact-section">
-            <div class="contact-form-container">
+            <div class="contact-form-container fade-in-section">
                 <h2>Miten työ etenee</h2>
                 <div class="contact-info">
                     <p>1. Arviointikäynti - käymme kohteen läpi paikan päällä</p>
@@ -148,12 +148,12 @@
         <section class="contact-section">
                 <div class="container">
                 </div>
-                <div class="image-gallery">
+                <div class="image-gallery fade-in-section">
                 <img src="./static/images/IMG_0053.jpg" alt="Terassin huolto 3" class="gallery-img">
                 <img src="./static/images/IMG_0059.jpg" alt="Terassin huolto 3" class="gallery-img">
                 <img src="./static/images/IMG_0308.jpg" alt="Terassin huolto 3" class="gallery-img">
                 </div>
-                <div class="intro-image">
+                <div class="intro-image fade-in-section">
                     <img src="./static/images/IMG_0327.jpg" alt="Moderni terassi">
                 </div>
         </section>
@@ -193,6 +193,26 @@
             }
 
             lastScrollY = currentScrollY;
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Optional: animate only once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach((section) => {
+            observer.observe(section);
         });
     </script>
 </body>

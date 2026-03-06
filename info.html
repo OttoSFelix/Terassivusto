@@ -31,7 +31,7 @@
     <main>
         <link rel="stylesheet" href="./static/css/info.css">
         <section class="contact-section">
-            <div class="top-container">
+            <div class="top-container fade-in-section">
                 <h2>Tietoa meistä</h2>
                 <div class="contact-info">
                     <h3>Urbaanipihat on nuorekas ja vastuullinen pihapalvelu Espoosta.</h3>
@@ -81,6 +81,26 @@
             }
 
             lastScrollY = currentScrollY;
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Optional: animate only once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach((section) => {
+            observer.observe(section);
         });
     </script>
 </body>
