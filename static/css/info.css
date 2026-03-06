@@ -2,7 +2,7 @@
 .contact-section {
     padding: 60px 20px;
     text-align: center;
-    background-image: url("../images/Terassi_brown.png");
+    background-image: url("../images/deck_background.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -26,7 +26,7 @@
 }
 
 .contact-info {
-    background-image: url("../images/Terassi_brown.png");
+    background-image: url("../images/deck_background.png");
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
