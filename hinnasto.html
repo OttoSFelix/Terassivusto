@@ -44,6 +44,7 @@
                     <div class="price-box fade-in-section">
                         <h3>Terassin huoltopaketti</h3>
                         <p>(sisältää painepesun + öljyämisen, materiaalit + työn)</p>
+                        <p>Hinnat alkaen 299€</p>
                         <!-- Otsikkorivi -->
                         <div class="price-row header-row">
                             <span class="area-label">Koko</span>
@@ -118,7 +119,7 @@
                         <p>Joskus paras lopputulos saadaan yhdistämällä koneellinen hionta ja uusi öljypinta. Tämä palvelu sisältää molemmat.</p>
                         <!-- Otsikkorivi -->
                         <div class="price-row header-row">
-                            <span class="area-label">Hinta: 21 €/m²</span>
+                            <span class="area-label">Hinta: 21 €/m² alkaen 450€</span>
                         </div>
                     </div>
                 </div>
@@ -129,6 +130,7 @@
                     <div class="price-box fade-in-section">
                         <h3>Parvekkeen, terassin tai muun erillinen pesu</h3>
                         <p>Sisältää tehokkaan painepesun ja pesuaineet.</p>
+                        <p>Hinta alkaen 199€</p>
                         <!-- Otsikkorivi -->
                         <div class="price-row header-row">
                             <span class="area-label">Koko</span>
@@ -241,12 +243,11 @@
                                         let numBlocks = Math.ceil(extraM2 / 10); // 10 m²:n lohkojen määrä yli 60 m²:n
                                         Käsihinta += numBlocks * 20; // Lisää 20 € per lohko
                                     }
-                    
                                     // Suorita muut laskelmat (Pesu, Muut, Kone) määritettyjen indeksien avulla
-                                    let Pesuhinta = (inputValue * Pesulista[Pesuindex]).toFixed(2);
+                                    let Pesuhinta = (Math.max(inputValue * Pesulista[Pesuindex], 299)).toFixed(2);
                                     // Käsinhinta on jo laskettu uuden logiikan perusteella
-                                    let Muuthinta = (inputValue * Muutlista[Muutindex]).toFixed(2);
-                                    let Konehinta = (inputValue * 21).toFixed(2); // Laske Konehinta suoraan
+                                    let Muuthinta = (Math.max(inputValue * Muutlista[Muutindex], 199)).toFixed(2);
+                                    let Konehinta = (Math.max(inputValue * 21, 450)).toFixed(2); // Laske Konehinta suoraan
                     
                                     // Päivitä tekstisisältö
                                     displayPesu.textContent = `${Pesuhinta} €`;
