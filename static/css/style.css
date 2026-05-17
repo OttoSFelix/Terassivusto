@@ -303,12 +303,22 @@ nav ul li a:hover {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0s;
+    position: relative;
+    z-index: 1;
 }
 
 .gallery-img:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.gallery-img.enlarged {
+    transform: scale(2);
+    z-index: 2000;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 .btncenter {

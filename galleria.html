@@ -124,6 +124,16 @@
         document.querySelectorAll('.fade-in-section').forEach((section) => {
             observer.observe(section);
         });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const galleryImages = document.querySelectorAll('.gallery-img');
+
+            galleryImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    this.classList.toggle('enlarged');
+                });
+            });
+        });
     </script>
 </body>
 </html>
