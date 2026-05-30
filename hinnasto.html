@@ -134,6 +134,7 @@
         document.getElementById('size').addEventListener('input', function() {
             const m2 = parseFloat(this.value);
             const fmt = v => Math.round(v).toLocaleString('fi-FI') + ' €';
+            const tuplaEl = document.getElementById('Tupla');
             if (isNaN(m2) || m2 <= 0) {
                 ['Pesu','Kasi','Kone','Muut'].forEach(id => document.getElementById(id).textContent = '-');
                 return;
@@ -146,6 +147,8 @@
             document.getElementById('Kasi').textContent = fmt(kasi);
             document.getElementById('Kone').textContent = fmt(kone);
             document.getElementById('Muut').textContent = fmt(muut);
+            const tupla = Math.max(75, m2 <= 50 ? m2 * 6 : m2 * 5);
+            document.getElementById('Tupla').textContent = fmt(tupla);
         });
         </script>
 
