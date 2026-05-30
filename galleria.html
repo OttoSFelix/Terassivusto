@@ -35,12 +35,13 @@
     .before-after-section h2{text-align:center;color:#fff;font-size:2em;margin-bottom:40px;}
     .ba-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:32px;max-width:1200px;margin:0 auto;}
     .ba-pair{background:#404040;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.4);}
-    .ba-labels{display:grid;grid-template-columns:1fr 1fr;}
-    .ba-label{text-align:center;padding:8px;font-size:.85em;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
-    .ba-label.before{background:#555;color:#bbb;}
-    .ba-label.after{background:#2E5C3E;color:#fff;}
+    .ba-images{display:grid;grid-template-columns:1fr 1fr;position:relative;}
     .ba-images{display:grid;grid-template-columns:1fr 1fr;}
-    .ba-images img{width:100%;height:260px;object-fit:cover;display:block;}
+    .ba-img-wrap{position:relative;overflow:hidden;}
+    .ba-img-wrap img{width:100%;height:260px;object-fit:cover;display:block;}
+    .ba-badge{position:absolute;top:12px;left:12px;padding:4px 10px;font-size:.8em;font-weight:700;text-transform:uppercase;letter-spacing:1px;border-radius:4px;}
+    .ba-badge.before{background:rgba(80,80,80,.85);color:#eee;}
+    .ba-badge.after{background:rgba(46,92,62,.9);color:#fff;}
     .gallery-rest{background:#333;padding:60px 20px;}
     .gallery-rest h2{text-align:center;color:#fff;font-size:2em;margin-bottom:40px;}
     .img-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;max-width:1200px;margin:0 auto;}
@@ -55,31 +56,28 @@
     <main>
         <section class="gallery-hero">
           <h2>Galleria</h2>
-          <p>Katso, miten urbaanipihat muuttuu &mdash; huolellisella työllä ja laadukkailla materiaaleilla.</p>
+          <p>Katso, miten urbaanipihat muuttuu - huolellisella työllä ja laadukkailla materiaaleilla.</p>
         </section>
 
         <section class="before-after-section">
           <h2>Ennen ja jälkeen</h2>
           <div class="ba-grid">
             <div class="ba-pair fade-in-section">
-              <div class="ba-labels"><span class="ba-label before">Ennen</span><span class="ba-label after">Jälkeen</span></div>
               <div class="ba-images">
-                <img src="./static/images/terassi1e.jpeg" alt="Terassi ennen">
-                <img src="./static/images/terassi1j.jpeg" alt="Terassi jälkeen">
+                <div class="ba-img-wrap"><img src="./static/images/terassi1e.jpeg" alt="Terassi ennen"><span class="ba-badge before">Ennen</span></div>
+                <div class="ba-img-wrap"><img src="./static/images/terassi1j.jpeg" alt="Terassi jälkeen"><span class="ba-badge after">Jälkeen</span></div>
               </div>
             </div>
             <div class="ba-pair fade-in-section">
-              <div class="ba-labels"><span class="ba-label before">Ennen</span><span class="ba-label after">Jälkeen</span></div>
               <div class="ba-images">
-                <img src="./static/images/terassi2e.jpeg" alt="Terassi ennen">
-                <img src="./static/images/terassi2j.jpeg" alt="Terassi jälkeen">
+                <div class="ba-img-wrap"><img src="./static/images/terassi2e.jpeg" alt="Terassi ennen"><span class="ba-badge before">Ennen</span></div>
+                <div class="ba-img-wrap"><img src="./static/images/terassi2j.jpeg" alt="Terassi jälkeen"><span class="ba-badge after">Jälkeen</span></div>
               </div>
             </div>
             <div class="ba-pair fade-in-section">
-              <div class="ba-labels"><span class="ba-label before">Ennen</span><span class="ba-label after">Jälkeen</span></div>
               <div class="ba-images">
-                <img src="./static/images/terassi3e.jpeg" alt="Terassi ennen">
-                <img src="./static/images/terassi3j.jpeg" alt="Terassi jälkeen">
+                <div class="ba-img-wrap"><img src="./static/images/terassi3e.jpeg" alt="Terassi ennen"><span class="ba-badge before">Ennen</span></div>
+                <div class="ba-img-wrap"><img src="./static/images/terassi3j.jpeg" alt="Terassi jälkeen"><span class="ba-badge after">Jälkeen</span></div>
               </div>
             </div>
           </div>

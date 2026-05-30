@@ -42,9 +42,9 @@
 
           <section class="kotitalo-banner fade-in-section">
             <div class="kotitalo-inner">
-              <div class="kotitalo-icon">&#128176;</div>
+              <div class="kotitalo-icon"></div>
               <div class="kotitalo-text">
-                <h3>Hyödynnä kotitalousvähennys &mdash; säästä jopa 40&nbsp;%</h3>
+                <h3>Hyödynnä kotitalousvähennys - säästä jopa 40&nbsp;%</h3>
                 <p>Työn osuudesta voit vähentää 40&nbsp;% suoraan verotuksessasi (enintään 2&nbsp;250&nbsp;€/henkilö/vuosi). Esimerkki: 600&nbsp;€ työ &rarr; maksat käytännössä vain noin 480&nbsp;€ verohyödyn jälkeen. Toimitamme tarvittavan erittelyn verottajaa varten.</p>
               </div>
             </div>
@@ -54,7 +54,7 @@
             <div class="container">
               <div class="price-box wide-box fade-in-section">
                 <h3>Terassin huoltopaketti</h3>
-                <p class="subtitle">Sisältää painepesun + öljyämisen, kaikki materiaalit ja työn &mdash; <strong>sis. ALV 25,5&nbsp;%</strong></p>
+                <p class="subtitle">Sisältää painepesun + öljyämisen, kaikki materiaalit ja työn - <strong>sis. ALV 25,5&nbsp;%</strong></p>
                 <div class="price-row header-row"><span class="area-label">Koko</span><span class="price-label">Hinta</span></div>
                 <div class="price-row data-row highlight-row">
                   <span class="area-value">Alle 20&nbsp;m²</span>
@@ -105,16 +105,16 @@
             <div class="container">
               <h2>Hintalaskuri</h2>
               <div class="contact-info calculator-box fade-in-section">
-                <p style="color:#aaa;font-size:0.95em;margin-bottom:16px;">Suuntaa-antava laskelma &mdash; lopullinen hinta vahvistetaan kartoituksessa.</p>
+                <p style="color:#aaa;font-size:0.95em;margin-bottom:16px;">Suuntaa-antava laskelma - lopullinen hinta vahvistetaan kartoituksessa.</p>
                 <div class="calc-input-row">
                   <label for="size">Terassin koko (m²):</label>
                   <input type="number" id="size" min="1" placeholder="esim. 25">
                 </div>
                 <div class="calc-results">
-                  <div class="calc-result-row"><span>Huoltopaketti (pesu + öljy):</span><strong id="Pesu">&mdash;</strong></div>
-                  <div class="calc-result-row"><span>+ Käsinhionta:</span><strong id="Kasi">&mdash;</strong></div>
-                  <div class="calc-result-row"><span>Konehionta + öljy:</span><strong id="Kone">&mdash;</strong></div>
-                  <div class="calc-result-row"><span>Erillinen pesu:</span><strong id="Muut">&mdash;</strong></div>
+                  <div class="calc-result-row"><span>Huoltopaketti (pesu + öljy):</span><strong id="Pesu">-</strong></div>
+                  <div class="calc-result-row"><span>+ Käsinhionta:</span><strong id="Kasi">-</strong></div>
+                  <div class="calc-result-row"><span>Konehionta + öljy:</span><strong id="Kone">-</strong></div>
+                  <div class="calc-result-row"><span>Erillinen pesu:</span><strong id="Muut">-</strong></div>
                 </div>
                 <p class="alv-note">Kaikki hinnat sisältävät ALV 25,5&nbsp;%. Kotitalousvähennyksellä säästät jopa 40&nbsp;% työn osuudesta.</p>
               </div>
@@ -123,7 +123,7 @@
 
           <section class="contact-section">
             <div class="contact-info fade-in-section">
-              <p>Kaikki hinnat sisältävät työn, tarvittavat materiaalit ja ALV 25,5&nbsp;%. Palvelut saatavilla <strong>Espoossa, Helsingissä, Vantaalla</strong> ja lähialueilla. Tarjoamme maksuttoman kartoituksen — ota yhteyttä!</p>
+              <p>Kaikki hinnat sisältävät työn, tarvittavat materiaalit ja ALV 25,5&nbsp;%. Palvelut saatavilla <strong>Espoossa, Helsingissä, Vantaalla</strong> ja lähialueilla. Tarjoamme maksuttoman kartoituksen - ota yhteyttä!</p>
               <div style="text-align:center;margin-top:20px;"><a href="yhteystiedot.html" class="btn btn-green">Pyydä maksuton kartoitus</a></div>
             </div>
           </section>
@@ -135,7 +135,7 @@
             const m2 = parseFloat(this.value);
             const fmt = v => Math.round(v).toLocaleString('fi-FI') + ' €';
             if (isNaN(m2) || m2 <= 0) {
-                ['Pesu','Kasi','Kone','Muut'].forEach(id => document.getElementById(id).textContent = '—');
+                ['Pesu','Kasi','Kone','Muut'].forEach(id => document.getElementById(id).textContent = '-');
                 return;
             }
             let pesu = m2 < 20 ? 399 : m2 <= 50 ? Math.max(399,m2*20) : m2 <= 100 ? m2*19 : m2*17;
