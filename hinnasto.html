@@ -2,15 +2,14 @@
 <html lang="fi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Urbaanipihat</title>
+    <title>Urbaanipihat - Hinnasto ja palvelualue</title>
     <link rel="icon" type="image/png" href="./static/images/icon.png">
     <link rel="stylesheet" href="./static/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/hinnasto.css">
 </head>
 <body>
-
     <header class="transparent-header">
         <div class="container header-content">
             <div class="logo">
@@ -18,259 +17,138 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="">Etusivu</a></li>
-                    <li><a href="yhteystiedot.html" class="">Ota yhteyttä</a></li>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="yhteystiedot.html">Ota yhteyttä</a></li>
                     <li><a href="hinnasto.html" class="active">Hinnasto ja palvelualue</a></li>
+                    <li><a href="galleria.html" class="">Galleria</a></li>
                     <li><a href="info.html" class="">Tietoa meistä</a></li>
                     <li><a href="huolto.html" class="">Rakennus & remontointi</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main>
-        <link rel="stylesheet" href="./static/css/hinnasto.css">
+
         <section class="price-page">
-            <section class="contact-section">
-                <div class="top-container fade-in-section">
-                    <h2>Hinnasto</h2>
-                    <div class="contact-info">
-                        <p>Selkeä ja kilpailukykyinen hinnoittelu. Ei piilokuluja. Alta löydät esimerkkihinnastomme yleisimmistä palveluistamme. Lopullinen hinta määräytyy paikan päällä tehtävän kartoituksen mukaan - näin varmistamme juuri sinun pihallesi sopivan ja oikeudenmukaisen tarjouksen.</p>
-                    </div>
-                </div>
-            </section>
-            <section class="price-overview-section">
-                <div class="container">
-                    <div class="price-box fade-in-section">
-                        <h3>Terassin huoltopaketti</h3>
-                        <p>(sisältää painepesun + öljyämisen, materiaalit + työn)</p>
-                        <p>Hinnat alkaen 299€</p>
-                        <!-- Otsikkorivi -->
-                        <div class="price-row header-row">
-                            <span class="area-label">Koko</span>
-                            <span class="price-label">Hinta</span>
-                        </div>
-                        <!-- Hintarivit -->
-                        <div class="price-row data-row">
-                            <span class="area-value">1-30 m²</span>
-                            <span class="price-value">17€ /m²</span>
-                        </div>
-                        <div class="price-row data-row">
-                            <span class="area-value">31-70 m²</span>
-                            <span class="price-value">16€ /m²</span>
-                        </div>
-                        <div class="price-row data-row">
-                            <span class="area-value">71-100 m²</span>
-                            <span class="price-value">15€ /m²</span>
-                        </div>
-                        <div class="price-row data-row">
-                            <span class="area-value">100+ m²</span>
-                            <span class="price-value">Alkaen 14€ /m²</span>
-                        </div>
-                        <div class="price-row data-row">
-                            <span class="area-value">Pelkkä pesu (ilman öljyämistä): 6-8 €/m² riippuen kohteen kunnosta ja koosta</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <section class="price-overview-section">
-                <div class="container">
-                    <h2>Lisäpalvelut</h2>
-                    <div class="price-box fade-in-section">
-                        <h3>Käsinhionta</h3>
-                        <p>Terassin hiominen ei sisälly huoltopakettiin. Suosittelemme hiontaa, jos puupinta on kulunut, epätasainen tai jos haluat erityisen siistin ja sileän lopputuloksen.
-                            Hiomme alustavasti käsin. Turvallisesti ja hallitusti.
-                            </p>
-                        <!-- Otsikkorivi -->
-                        <div class="price-row header-row">
-                            <span class="area-label">Terassin koko</span>
-                            <span class="price-label">Hinta</span>
-                        </div>
-                        <!-- Hintarivit -->
-                        <div class="price-row data-row">
-                            <span class="area-value">Alle 30 m²</span>
-                            <span class="price-value">40€</span>
-                        </div>
-                        <div class="price-row data-row">
-                            <span class="area-value">Alle 40 m²</span>
-                            <span class="price-value">60€</span>
-                        </div>
-                        <div class="price-row data-row">
-                            <span class="area-value">Alle 50 m²</span>
-                            <span class="price-value">80€</span>
-                        </div>
-                        <div class="price-row data-row">
-                            <span class="area-value">Alle 60 m²</span>
-                            <span class="price-value">100€</span>
-                        </div>
-                        <div class="price-row data-row">
-                            <span class="area-value"><p>. . .</p></span>
-                            <span class="price-value">+20€ / +10 m²</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          <section class="contact-section">
+            <div class="top-container fade-in-section">
+              <h2>Hinnasto</h2>
+              <div class="contact-info">
+                <p>Selkeä hinnoittelu ilman piilokuluja. Kaikki hinnat sisältävät työn, materiaalit ja ALV&nbsp;25,5&nbsp;%. Lopullinen hinta vahvistetaan maksuttomassa kartoituskäynnissä.</p>
+              </div>
+            </div>
+          </section>
 
-            <section class="price-overview-section">
-                <div class="container">
-                    <div class="price-box fade-in-section">
-                        <h3>Konehionta + öljyäminen</h3>
-                        <p>Joskus paras lopputulos saadaan yhdistämällä koneellinen hionta ja uusi öljypinta. Tämä palvelu sisältää molemmat.</p>
-                        <!-- Otsikkorivi -->
-                        <div class="price-row header-row">
-                            <span class="area-label">Hinta: 21 €/m² alkaen 450€</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          <section class="kotitalo-banner fade-in-section">
+            <div class="kotitalo-inner">
+              <div class="kotitalo-icon">&#128176;</div>
+              <div class="kotitalo-text">
+                <h3>Hyödynnä kotitalousvähennys &mdash; säästä jopa 40&nbsp;%</h3>
+                <p>Työn osuudesta voit vähentää 40&nbsp;% suoraan verotuksessasi (enintään 2&nbsp;250&nbsp;€/henkilö/vuosi). Esimerkki: 600&nbsp;€ työ &rarr; maksat käytännössä vain noin 480&nbsp;€ verohyödyn jälkeen. Toimitamme tarvittavan erittelyn verottajaa varten.</p>
+              </div>
+            </div>
+          </section>
 
-            <section class="price-overview-section">
-                <div class="container">
-                    <div class="price-box fade-in-section">
-                        <h3>Parvekkeen, terassin tai muun erillinen pesu</h3>
-                        <p>Sisältää tehokkaan painepesun ja pesuaineet.</p>
-                        <p>Hinta alkaen 199€</p>
-                        <!-- Otsikkorivi -->
-                        <div class="price-row header-row">
-                            <span class="area-label">Koko</span>
-                            <span class="price-label">Hinta</span>
-                        </div>
-                        <!-- Hintarivit -->
-                        <div class="price-row data-row">
-                            <span class="area-value">1-50 m²</span>
-                            <span class="price-value">8 €/m²</span>
-                        </div>
-                        <div class="price-row data-row">
-                            <span class="area-value">51-100 m²</span>
-                            <span class="price-value">7 €/m²</span>
-                        </div>
-                        <div class="price-row data-row">
-                            <span class="area-value">100+ m²</span>
-                            <span class="price-value">6 €/m²</span>
-                        </div>
-                        
-                    </div>
+          <section class="price-overview-section">
+            <div class="container">
+              <div class="price-box wide-box fade-in-section">
+                <h3>Terassin huoltopaketti</h3>
+                <p class="subtitle">Sisältää painepesun + öljyämisen, kaikki materiaalit ja työn &mdash; <strong>sis. ALV 25,5&nbsp;%</strong></p>
+                <div class="price-row header-row"><span class="area-label">Koko</span><span class="price-label">Hinta</span></div>
+                <div class="price-row data-row highlight-row">
+                  <span class="area-value">Alle 20&nbsp;m²</span>
+                  <span class="price-value">399&nbsp;€ <span class="fixed-badge">kiinteä</span></span>
                 </div>
-            </section>
+                <div class="price-row data-row"><span class="area-value">20&ndash;50&nbsp;m²</span><span class="price-value">20&nbsp;€/m²</span></div>
+                <div class="price-row data-row"><span class="area-value">51&ndash;100&nbsp;m²</span><span class="price-value">19&nbsp;€/m²</span></div>
+                <div class="price-row data-row"><span class="area-value">100+&nbsp;m²</span><span class="price-value">alkaen 17&nbsp;€/m²</span></div>
+                <div class="price-row data-row muted-row"><span class="area-value">Pelkkä pesu (ilman öljyämistä)</span><span class="price-value">9&ndash;11&nbsp;€/m²</span></div>
+              </div>
+            </div>
+          </section>
 
-            <section class="contact-section">
-                <div class="contact-info">
-                    <p>Kaikki hinnat sisältävät työn ja tarvittavat materiaalit. Palvelut saatavilla Espoossa, Helsingissä, Vantaalla ja lähialueilla. Tarjoamme myös maksuttoman kartoituksen, jossa arvioimme työn laajuuden ja materiaalitarpeet.</p>
+          <section class="price-overview-section">
+            <div class="container">
+              <h2>Lisäpalvelut</h2>
+              <div class="price-cards">
+
+                <div class="price-box fade-in-section">
+                  <h3>Käsinhionta</h3>
+                  <p>Suosittelemme hiontaa, jos puupinta on kulunut tai epätasainen. Hiomme käsin turvallisesti ja hallitusti.</p>
+                  <div class="price-row header-row"><span class="area-label">Lisähinta paketin päälle</span><span class="price-label">Hinta</span></div>
+                  <div class="price-row data-row"><span class="area-value">+3&nbsp;€/m²</span><span class="price-value">min. 75&nbsp;€</span></div>
                 </div>
-            </section>
 
-            <section class="contact-section">
-                <div class="container fade-in-section">
-                    <h2>Hintalaskuri</h2>
-                    <div class="contact-info">
-                        <div class="contact-calculator">
-                            <div class="btn btn-dark">
-                                <p>Terassin koko m²: <input type="number" id="size" name="size" style="width: 100px;"></p>
-                            </div>
-                        </div>
-                        <p>Terassin huoltopaketti: <span id="Pesu"></span></p>
-                        <p>Käsinhionta: <span id="Käsi"></span></p>
-                        <p>Konehionta + öljyäminen: <span id="Kone"></span></p>
-                        <p>Parvekkeen, terassin tai muun erillinen pesu: <span id="Muut"></span></p>
-                    </div>
-                    
-                    <script>
-                        // Funktio tekstikentän syötteen näyttämiseen reaaliaikaisesti ja laskelmiin
-                        function setupInstantDisplay(inputId, displayPesuId, displayKasiId, displayKoneId, displayMuutId) {
-                            const inputElement = document.getElementById(inputId);
-                            const displayPesu = document.getElementById(displayPesuId);
-                            const displayKäsi = document.getElementById(displayKasiId);
-                            const displayKone = document.getElementById(displayKoneId);
-                            const displayMuut = document.getElementById(displayMuutId);
-                    
-                            // Määrittele hintalistat tässä, jotta niitä ei luoda uudelleen joka kerta kun syöte muuttuu
-                            const Pesulista = [17, 16, 15, 14];
-                            // Käsilistaa ei enää käytetä suoraan indeksillä, koska hinta lasketaan kaavan mukaan.
-                            const Muutlista = [8, 7, 6];
-                    
-                            if (inputElement && displayPesu && displayKäsi && displayKone && displayMuut) {
-                                // Funktio laskelmien suorittamiseen ja näytön päivittämiseen
-                                const updatePrices = function() {
-                                    const inputValue = parseFloat(inputElement.value); // Muunna syöte numeroksi
-                    
-                                    // Tyhjennä näytöt, jos syöte on tyhjä tai virheellinen
-                                    if (isNaN(inputValue) || inputValue <= 0) {
-                                        displayPesu.textContent = '';
-                                        displayKäsi.textContent = '';
-                                        displayKone.textContent = '';
-                                        displayMuut.textContent = '';
-                                        return; // Poistu, jos syöte ei ole kelvollinen
-                                    }
-                    
-                                    let Pesuindex = 0;
-                                    let Muutindex = 0;
-                                    let Käsihinta = 0; // Alusta Käsinhinta tässä
-                    
-                                    // Määritä indeksit ja Käsinhinta syötearvon perusteella
-                                    if (inputValue > 0 && inputValue <= 30) {
-                                        Pesuindex = 0;
-                                        Muutindex = 0;
-                                        Käsihinta = 40;
-                                    } else if (inputValue > 30 && inputValue <= 40) {
-                                        Pesuindex = 1;
-                                        Muutindex = 0;
-                                        Käsihinta = 60;
-                                    } else if (inputValue > 40 && inputValue <= 50) {
-                                        Pesuindex = 1;
-                                        Muutindex = 0;
-                                        Käsihinta = 80;
-                                    } else if (inputValue > 50 && inputValue <= 60) {
-                                        Pesuindex = 1;
-                                        Muutindex = 1;
-                                        Käsihinta = 100;
-                                    } else if (inputValue > 60) {
-                                        // Käsittele Pesuindex ja Muutindex yli 60 m²:n alueille
-                                        if (inputValue <= 70) {
-                                            Pesuindex = 1;
-                                            Muutindex = 1;
-                                        } else if (inputValue <= 100) {
-                                            Pesuindex = 2;
-                                            Muutindex = 1;
-                                        } else {
-                                            Pesuindex = 3;
-                                            Muutindex = 2;
-                                        }
-                    
-                                        // Laske Käsinhinta yli 60 m²:n arvoille
-                                        Käsihinta = 100; // Perushinta 60 m²:lle
-                                        let extraM2 = inputValue - 60;
-                                        let numBlocks = Math.ceil(extraM2 / 10); // 10 m²:n lohkojen määrä yli 60 m²:n
-                                        Käsihinta += numBlocks * 20; // Lisää 20 € per lohko
-                                    }
-                                    // Suorita muut laskelmat (Pesu, Muut, Kone) määritettyjen indeksien avulla
-                                    let Pesuhinta = (Math.max(inputValue * Pesulista[Pesuindex], 299)).toFixed(2);
-                                    // Käsinhinta on jo laskettu uuden logiikan perusteella
-                                    let Muuthinta = (Math.max(inputValue * Muutlista[Muutindex], 199)).toFixed(2);
-                                    let Konehinta = (Math.max(inputValue * 21, 450)).toFixed(2); // Laske Konehinta suoraan
-                    
-                                    // Päivitä tekstisisältö
-                                    displayPesu.textContent = `${Pesuhinta} €`;
-                                    displayKäsi.textContent = `${Käsihinta.toFixed(2)} €`; // Varmista, että Käsinhinta on myös muotoiltu
-                                    displayKone.textContent = `${Konehinta} €`;
-                                    displayMuut.textContent = `${Muuthinta} €`;
-                                };
-                    
-                                // Lisää tapahtumakuuntelija syötteen muutoksille
-                                inputElement.addEventListener('input', updatePrices);
-                    
-                                // Alkuperäinen laskenta sivun latautuessa (jos syöttökentässä on oletusarvo)
-                                updatePrices();
-                            }
-                        }
-                    
-                        // Kutsu funktiota koon syöttökentälle ja vastaaville näyttöelementeille
-                        document.addEventListener('DOMContentLoaded', function() {
-                            setupInstantDisplay('size', 'Pesu', 'Käsi', 'Kone', 'Muut');
-                        });
-                    </script>
-            </section>
+                <div class="price-box fade-in-section">
+                  <h3>Konehionta + öljyäminen</h3>
+                  <p>Paras lopputulos yhdistämällä koneellinen hionta ja uusi öljypinta. Sisältää molemmat.</p>
+                  <div class="price-row header-row"><span class="area-label">Hinta</span></div>
+                  <div class="price-row data-row"><span class="area-value">27&nbsp;€/m²</span><span class="price-value">min. 599&nbsp;€</span></div>
+                </div>
+
+                <div class="price-box fade-in-section">
+                  <h3>Erillinen pesu</h3>
+                  <p>Tehokas painepesu pesuaineineen. Sopii parvekkeiden, portaiden ja muiden ulkopintojen puhdistukseen.</p>
+                  <div class="price-row header-row"><span class="area-label">Koko</span><span class="price-label">Hinta</span></div>
+                  <div class="price-row data-row"><span class="area-value">1&ndash;50&nbsp;m²</span><span class="price-value">10&nbsp;€/m²</span></div>
+                  <div class="price-row data-row"><span class="area-value">51&ndash;100&nbsp;m²</span><span class="price-value">9&nbsp;€/m²</span></div>
+                  <div class="price-row data-row"><span class="area-value">100+&nbsp;m²</span><span class="price-value">8&nbsp;€/m²</span></div>
+                  <div class="price-row data-row muted-row"><span class="area-value">Minimiveloitus</span><span class="price-value">249&nbsp;€</span></div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <section class="price-overview-section">
+            <div class="container">
+              <h2>Hintalaskuri</h2>
+              <div class="contact-info calculator-box fade-in-section">
+                <p style="color:#aaa;font-size:0.95em;margin-bottom:16px;">Suuntaa-antava laskelma &mdash; lopullinen hinta vahvistetaan kartoituksessa.</p>
+                <div class="calc-input-row">
+                  <label for="size">Terassin koko (m²):</label>
+                  <input type="number" id="size" min="1" placeholder="esim. 25">
+                </div>
+                <div class="calc-results">
+                  <div class="calc-result-row"><span>Huoltopaketti (pesu + öljy):</span><strong id="Pesu">&mdash;</strong></div>
+                  <div class="calc-result-row"><span>+ Käsinhionta:</span><strong id="Kasi">&mdash;</strong></div>
+                  <div class="calc-result-row"><span>Konehionta + öljy:</span><strong id="Kone">&mdash;</strong></div>
+                  <div class="calc-result-row"><span>Erillinen pesu:</span><strong id="Muut">&mdash;</strong></div>
+                </div>
+                <p class="alv-note">Kaikki hinnat sisältävät ALV 25,5&nbsp;%. Kotitalousvähennyksellä säästät jopa 40&nbsp;% työn osuudesta.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="contact-section">
+            <div class="contact-info fade-in-section">
+              <p>Kaikki hinnat sisältävät työn, tarvittavat materiaalit ja ALV 25,5&nbsp;%. Palvelut saatavilla <strong>Espoossa, Helsingissä, Vantaalla</strong> ja lähialueilla. Tarjoamme maksuttoman kartoituksen — ota yhteyttä!</p>
+              <div style="text-align:center;margin-top:20px;"><a href="yhteystiedot.html" class="btn btn-green">Pyydä maksuton kartoitus</a></div>
+            </div>
+          </section>
+
         </section>
+
+        <script>
+        document.getElementById('size').addEventListener('input', function() {
+            const m2 = parseFloat(this.value);
+            const fmt = v => Math.round(v).toLocaleString('fi-FI') + ' €';
+            if (isNaN(m2) || m2 <= 0) {
+                ['Pesu','Kasi','Kone','Muut'].forEach(id => document.getElementById(id).textContent = '—');
+                return;
+            }
+            let pesu = m2 < 20 ? 399 : m2 <= 50 ? Math.max(399,m2*20) : m2 <= 100 ? m2*19 : m2*17;
+            let kasi = Math.max(75, m2*3);
+            let kone = Math.max(599, m2*27);
+            let muut = m2 <= 50 ? Math.max(249,m2*10) : m2 <= 100 ? m2*9 : m2*8;
+            document.getElementById('Pesu').textContent = fmt(pesu);
+            document.getElementById('Kasi').textContent = fmt(kasi);
+            document.getElementById('Kone').textContent = fmt(kone);
+            document.getElementById('Muut').textContent = fmt(muut);
+        });
+        </script>
+
     </main>
     <footer>
         <div class="container">
@@ -278,55 +156,20 @@
         </div>
     </footer>
     <script>
-        // JavaScript for hide on scroll header AND transparent background toggle
         let lastScrollY = 0;
         const header = document.querySelector('header');
-        const headerHeight = header.offsetHeight; 
-
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
-
-            // 1. Logic for Hiding/Showing the header (Roll up)
-            if (currentScrollY > lastScrollY && currentScrollY > 10) {
-                // Scrolling down and past header height -> Hide
-                header.classList.add('hidden');
-            } else {
-                // Scrolling up -> Show
-                header.classList.remove('hidden');
-            }
-
-            // 2. Logic for Scrolled Background (Transparency toggle)
-            if (currentScrollY > 50) {
-                // If scrolled down more than 50px, add 'scrolled' class (makes bg white)
-                header.classList.add('scrolled');
-            } else {
-                // If at top, remove 'scrolled' class (makes bg transparent if on home)
-                header.classList.remove('scrolled');
-            }
-
+            if (currentScrollY > lastScrollY && currentScrollY > 10) header.classList.add('hidden');
+            else header.classList.remove('hidden');
+            if (currentScrollY > 200) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
             lastScrollY = currentScrollY;
         });
-
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // Optional: animate only once
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in-section').forEach((section) => {
-            observer.observe(section);
-        });
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.fade-in-section').forEach(s => observer.observe(s));
     </script>
 </body>
 </html>
-

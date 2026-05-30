@@ -283,3 +283,45 @@
         font-size: 1.1em;
     }
 }
+/* ── Kotitalousvähennys banner ─────────────────── */
+.kotitalo-banner{background:linear-gradient(135deg,#1a3d25,#2E5C3E);padding:36px 20px;}
+.kotitalo-inner{max-width:900px;margin:0 auto;display:flex;align-items:flex-start;gap:20px;}
+.kotitalo-icon{font-size:2.5em;flex-shrink:0;margin-top:4px;}
+.kotitalo-text h3{color:#fff;margin:0 0 8px;font-size:1.3em;}
+.kotitalo-text p{color:#c8e6c9;margin:0;font-size:1em;line-height:1.6;}
+
+/* ── Wide box & price cards ────────────────────── */
+.wide-box{max-width:680px!important;}
+.subtitle{text-align:center;color:#aaa!important;font-size:.9em!important;margin-bottom:12px!important;}
+.highlight-row .area-value,.highlight-row .price-value{color:#81c784!important;font-weight:700;}
+.fixed-badge{background:#2E5C3E;color:#fff;font-size:.65em;padding:2px 7px;border-radius:4px;margin-left:6px;vertical-align:middle;}
+.muted-row .area-value,.muted-row .price-value{color:#888!important;font-size:.9em!important;}
+.price-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1000px;margin:0 auto;}
+.price-cards .price-box{max-width:none;}
+
+/* ── Calculator ─────────────────────────────────── */
+.calculator-box{max-width:700px;}
+.calc-input-row{display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap;}
+.calc-input-row label{color:#ddd;font-weight:600;}
+.calc-input-row input{background:#555;border:1px solid #777;color:#fff;padding:8px 12px;border-radius:6px;font-size:1em;width:100px;}
+.calc-results{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
+.calc-result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px dashed #555;color:#ccc;}
+.calc-result-row strong{color:#fff;font-size:1.1em;}
+.alv-note{color:#aaa;font-size:.85em;margin-top:16px;}
+
+/* ── USP bar ────────────────────────────────────── */
+.usp-bar{background:#1a1a1a;padding:20px;}
+.usp-grid{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;max-width:900px;margin:0 auto;}
+.usp-item{display:flex;align-items:center;gap:8px;color:#ccc;font-size:.95em;}
+.usp-icon{font-size:1.2em;}
+
+/* ── Kotitalousvähennys highlight (etusivu) ─────── */
+.kotitalo-highlight{background:linear-gradient(135deg,#1a3d25,#2E5C3E)!important;border:none!important;}
+.kotitalo-badge{display:inline-block;background:rgba(255,255,255,.15);color:#c8e6c9;font-weight:700;font-size:.9em;padding:4px 10px;border-radius:4px;margin-bottom:8px;}
+.kotitalo-highlight p,.kotitalo-highlight strong{color:#e8f5e9;}
+
+/* ── Green CTA ──────────────────────────────────── */
+.btn-green{background:#2E5C3E;color:#fff;padding:12px 28px;border-radius:6px;text-decoration:none;font-weight:700;display:inline-block;transition:background .2s;}
+.btn-green:hover{background:#3d7a52;}
+
+@media(max-width:600px){.kotitalo-inner{flex-direction:column;}.price-cards{grid-template-columns:1fr;}}
