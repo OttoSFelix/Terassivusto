@@ -144,23 +144,20 @@
         document.getElementById('size').addEventListener('input', function() {
             const m2 = parseFloat(this.value);
             const fmt = v => Math.round(v).toLocaleString('fi-FI') + ' €';
-            const tuplaEl = document.getElementById('Tupla');
             if (isNaN(m2) || m2 <= 0) {
-                ['Pesu','Kasi','Kone','Muut'].forEach(id => document.getElementById(id).textContent = '-');
+                ['Pesu','Kasi','Tupla','Kone','Muut'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = ''; });
                 return;
             }
-            let pesu = m2 < 20 ? 399 : m2 <= 50 ? Math.max(399,m2*20) : m2 <= 100 ? m2*19 : m2*17;
-            let kasi = Math.max(75, m2*3);
-            let kone = Math.max(599, m2*27);
-            let tupla = Math.max(75, m2 <= 50 ? m2*6 : m2*5);
-            let muut = m2 <= 50 ? Math.max(249,m2*10) : m2 <= 100 ? m2*9 : m2*8;
+            const pesu = m2 < 20 ? 399 : m2 <= 50 ? Math.max(399, m2*20) : m2 <= 100 ? m2*19 : m2*17;
+            const kasi = Math.max(75, m2*3);
+            const tupla = Math.max(75, m2 <= 50 ? m2*6 : m2*5);
+            const kone = Math.max(599, m2*27);
+            const muut = m2 <= 50 ? Math.max(249, m2*10) : m2 <= 100 ? m2*9 : m2*8;
             document.getElementById('Pesu').textContent = fmt(pesu);
             document.getElementById('Kasi').textContent = fmt(kasi);
+            document.getElementById('Tupla').textContent = fmt(tupla);
             document.getElementById('Kone').textContent = fmt(kone);
             document.getElementById('Muut').textContent = fmt(muut);
-            if(document.getElementById('Tupla')) document.getElementById('Tupla').textContent = fmt(tupla);
-            const tupla = Math.max(75, m2 <= 50 ? m2 * 6 : m2 * 5);
-            document.getElementById('Tupla').textContent = fmt(tupla);
         });
         </script>
 
