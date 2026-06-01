@@ -81,6 +81,15 @@
                 </div>
 
                 <div class="price-box fade-in-section">
+                  <h3>Toinen öljykerros</h3>
+                  <p>Suosittelemme toista kerrosta uusille ja pitkään hoitamattomille pinnoille. Puu imee ensimmäisen kerroksen nopeasti, toinen kerros antaa kestävän suojan ja syvemmän värin.</p>
+                  <div class="price-row header-row"><span class="area-label">Koko</span><span class="price-label">Hinta sis. ALV</span></div>
+                  <div class="price-row data-row"><span class="area-value">alle 50&nbsp;m²</span><span class="price-value">6&nbsp;€/m²</span></div>
+                  <div class="price-row data-row"><span class="area-value">yli 50&nbsp;m²</span><span class="price-value">5&nbsp;€/m²</span></div>
+                  <div class="price-row data-row muted-row"><span class="area-value">Minimiveloitus</span><span class="price-value">75&nbsp;€</span></div>
+                </div>
+
+                <div class="price-box fade-in-section">
                   <h3>Konehionta + öljyäminen</h3>
                   <p>Paras lopputulos yhdistämällä koneellinen hionta ja uusi öljypinta. Sisältää molemmat.</p>
                   <div class="price-row header-row"><span class="area-label">Hinta</span></div>
@@ -113,6 +122,7 @@
                 <div class="calc-results">
                   <div class="calc-result-row"><span>Huoltopaketti (pesu + öljy):</span><strong id="Pesu">-</strong></div>
                   <div class="calc-result-row"><span>+ Käsinhionta:</span><strong id="Kasi">-</strong></div>
+                  <div class="calc-result-row"><span>Toinen öljykerros:</span><strong id="Tupla"></strong></div>
                   <div class="calc-result-row"><span>Konehionta + öljy:</span><strong id="Kone">-</strong></div>
                   <div class="calc-result-row"><span>Erillinen pesu:</span><strong id="Muut">-</strong></div>
                 </div>
@@ -142,11 +152,13 @@
             let pesu = m2 < 20 ? 399 : m2 <= 50 ? Math.max(399,m2*20) : m2 <= 100 ? m2*19 : m2*17;
             let kasi = Math.max(75, m2*3);
             let kone = Math.max(599, m2*27);
+            let tupla = Math.max(75, m2 <= 50 ? m2*6 : m2*5);
             let muut = m2 <= 50 ? Math.max(249,m2*10) : m2 <= 100 ? m2*9 : m2*8;
             document.getElementById('Pesu').textContent = fmt(pesu);
             document.getElementById('Kasi').textContent = fmt(kasi);
             document.getElementById('Kone').textContent = fmt(kone);
             document.getElementById('Muut').textContent = fmt(muut);
+            if(document.getElementById('Tupla')) document.getElementById('Tupla').textContent = fmt(tupla);
             const tupla = Math.max(75, m2 <= 50 ? m2 * 6 : m2 * 5);
             document.getElementById('Tupla').textContent = fmt(tupla);
         });
